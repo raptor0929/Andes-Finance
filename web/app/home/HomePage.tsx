@@ -4,6 +4,7 @@ import Footer from '@/components/layout/footer/Footer';
 import Header from '@/components/layout/header/Header';
 import HeaderHome from '@/components/Home/HeaderHome';
 import TranslationProvider from '@/components/Global/TranslationProvider';
+import Home from '@/components/Home';
 
 /**
  * Use the page component to wrap the components
@@ -35,7 +36,8 @@ export default function HomePage() {
       </main>
       <Footer /> */}
       <TranslationProvider>
-        <HeaderHome />
+        {/* <HeaderHome /> */}
+        <Home />
       </TranslationProvider>
     </>
   );

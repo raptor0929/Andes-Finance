@@ -9,7 +9,6 @@ languageDetector.addDetector({
   name: 'customLocalStorage',
   lookup() {
     const lng = localStorage.getItem('i18nextLng') || null;
-    console.log('Detected language:', lng || navigator.language);
     return lng || null;
   },
   cacheUserLanguage(lng) {
