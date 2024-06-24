@@ -1478,6 +1478,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.23.9":
+  version: 7.24.7
+  resolution: "@babel/runtime@npm:7.24.7"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/b6fa3ec61a53402f3c1d75f4d808f48b35e0dfae0ec8e2bb5c6fc79fb95935da75766e0ca534d0f1c84871f6ae0d2ebdd950727cfadb745a2cdbef13faef5513
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.22.15, @babel/template@npm:^7.24.0, @babel/template@npm:^7.3.3":
   version: 7.24.0
   resolution: "@babel/template@npm:7.24.0"
@@ -1524,98 +1533,6 @@ __metadata:
   checksum: 10c0/6b80ae4cb3db53f486da2dc63b6e190a74c8c3cca16bb2733f234a0b6a9382b09b146488ae08e2b22cf00f6c83e20f3e040a2f7894f05c045c946d6a090b1d52
   languageName: node
   linkType: hard
-
-"@build-onchain-apps/docs@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@build-onchain-apps/docs@workspace:."
-  dependencies:
-    "@babel/preset-env": "npm:^7.23.5"
-    "@babel/preset-react": "npm:^7.23.3"
-    "@babel/preset-typescript": "npm:^7.23.3"
-    "@coinbase/onchainkit": "npm:^0.19.7"
-    "@coinbase/wallet-sdk": "npm:4.0.0"
-    "@farcaster/hub-nodejs": "npm:^0.11.9"
-    "@jest/globals": "npm:^29.7.0"
-    "@radix-ui/react-dropdown-menu": "npm:^2.0.6"
-    "@radix-ui/react-icons": "npm:^1.3.0"
-    "@radix-ui/react-navigation-menu": "npm:^1.1.4"
-    "@react-spring/web": "npm:^9.7.3"
-    "@tanstack/react-query": "npm:^5.20.1"
-    "@testing-library/jest-dom": "npm:^6.1.5"
-    "@testing-library/react": "npm:^14.1.2"
-    "@testing-library/user-event": "npm:^14.5.2"
-    "@types/babel__preset-env": "npm:^7"
-    "@types/identity-obj-proxy": "npm:^3"
-    "@types/jest": "npm:^29.5.10"
-    "@types/minipass": "npm:^3.3.5"
-    "@types/node": "npm:^20"
-    "@types/react": "npm:^18"
-    "@types/react-dom": "npm:^18"
-    "@typescript-eslint/eslint-plugin": "npm:^5.54.1"
-    "@typescript-eslint/parser": "npm:^5.54.1"
-    "@typescript-eslint/type-utils": "npm:^5.54.1"
-    "@typescript-eslint/types": "npm:^5.54.1"
-    "@typescript-eslint/utils": "npm:^5.54.1"
-    abitype: "npm:^0.10.3"
-    autoprefixer: "npm:^10.4.16"
-    babel-jest: "npm:^29.7.0"
-    clsx: "npm:^2.1.0"
-    eslint: "npm:^8.27.0"
-    eslint-config-airbnb: "npm:19.0.4"
-    eslint-config-airbnb-typescript: "npm:17.0.0"
-    eslint-config-next: "npm:13.5.6"
-    eslint-config-prettier: "npm:^8.5.0"
-    eslint-formatter-codeframe: "npm:^7.32.1"
-    eslint-import-resolver-typescript: "npm:^3.5.2"
-    eslint-plugin-compat: "npm:^4.0.2"
-    eslint-plugin-cypress: "npm:^2.10.3"
-    eslint-plugin-import: "npm:2.27.5"
-    eslint-plugin-jest: "npm:^27.1.4"
-    eslint-plugin-jsx-a11y: "npm:6.8.0"
-    eslint-plugin-react: "npm:7.33.2"
-    eslint-plugin-react-hooks: "npm:4.6.0"
-    eslint-plugin-react-perf: "npm:^3.3.1"
-    eslint-plugin-relay: "npm:^1.8.3"
-    eslint-plugin-simple-import-sort: "npm:^8.0.0"
-    graphql: "npm:14"
-    graphql-request: "npm:6"
-    identity-obj-proxy: "npm:^3.0.0"
-    jest: "npm:^29.7.0"
-    jest-environment-jsdom: "npm:^29.7.0"
-    jest-extended: "npm:^4.0.2"
-    net: "npm:^1.0.2"
-    next: "npm:13.5.6"
-    next-pwa: "npm:5.6.0"
-    perfume.js: "npm:9.2.0"
-    permissionless: "npm:0.1.26"
-    pino-pretty: "npm:^10.3.1"
-    postcss: "npm:^8.4.32"
-    prettier: "npm:3.0.3"
-    prettier-plugin-solidity: "npm:^1.3.1"
-    prettier-plugin-tailwindcss: "npm:^0.5.9"
-    react: "npm:^18"
-    react-dom: "npm:^18"
-    react-remove-scroll: "npm:^2.5.7"
-    rehype-pretty-code: "npm:0.12.3"
-    rehype-stringify: "npm:^10.0.0"
-    remark-parse: "npm:^11.0.0"
-    remark-rehype: "npm:^11.0.0"
-    scroll-into-view-if-needed: "npm:^3.1.0"
-    shikiji: "npm:^0.9.17"
-    shikiji-core: "npm:^0.9.17"
-    stylelint: "npm:^16.0.2"
-    stylelint-config-idiomatic-order: "npm:^10.0.0"
-    stylelint-config-standard: "npm:^35.0.0"
-    stylelint-order: "npm:^6.0.4"
-    tailwindcss: "npm:^3.4.0"
-    ts-jest: "npm:^29.1.1"
-    typescript: "npm:~5.3.3"
-    unified: "npm:^11.0.4"
-    viem: "npm:2.x"
-    wagmi: "npm:^2.9.2"
-    workbox-webpack-plugin: "npm:^7.0.0"
-  languageName: unknown
-  linkType: soft
 
 "@coinbase/onchainkit@npm:^0.19.7":
   version: 0.19.7
@@ -5278,6 +5195,102 @@ __metadata:
   languageName: node
   linkType: hard
 
+"andes-finance@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "andes-finance@workspace:."
+  dependencies:
+    "@babel/preset-env": "npm:^7.23.5"
+    "@babel/preset-react": "npm:^7.23.3"
+    "@babel/preset-typescript": "npm:^7.23.3"
+    "@coinbase/onchainkit": "npm:^0.19.7"
+    "@coinbase/wallet-sdk": "npm:4.0.0"
+    "@farcaster/hub-nodejs": "npm:^0.11.9"
+    "@jest/globals": "npm:^29.7.0"
+    "@radix-ui/react-dropdown-menu": "npm:^2.0.6"
+    "@radix-ui/react-icons": "npm:^1.3.0"
+    "@radix-ui/react-navigation-menu": "npm:^1.1.4"
+    "@react-spring/web": "npm:^9.7.3"
+    "@tanstack/react-query": "npm:^5.20.1"
+    "@testing-library/jest-dom": "npm:^6.1.5"
+    "@testing-library/react": "npm:^14.1.2"
+    "@testing-library/user-event": "npm:^14.5.2"
+    "@types/babel__preset-env": "npm:^7"
+    "@types/identity-obj-proxy": "npm:^3"
+    "@types/jest": "npm:^29.5.10"
+    "@types/minipass": "npm:^3.3.5"
+    "@types/node": "npm:^20"
+    "@types/react": "npm:^18"
+    "@types/react-dom": "npm:^18"
+    "@typescript-eslint/eslint-plugin": "npm:^5.54.1"
+    "@typescript-eslint/parser": "npm:^5.54.1"
+    "@typescript-eslint/type-utils": "npm:^5.54.1"
+    "@typescript-eslint/types": "npm:^5.54.1"
+    "@typescript-eslint/utils": "npm:^5.54.1"
+    abitype: "npm:^0.10.3"
+    autoprefixer: "npm:^10.4.16"
+    babel-jest: "npm:^29.7.0"
+    clsx: "npm:^2.1.0"
+    eslint: "npm:^8.27.0"
+    eslint-config-airbnb: "npm:19.0.4"
+    eslint-config-airbnb-typescript: "npm:17.0.0"
+    eslint-config-next: "npm:13.5.6"
+    eslint-config-prettier: "npm:^8.5.0"
+    eslint-formatter-codeframe: "npm:^7.32.1"
+    eslint-import-resolver-typescript: "npm:^3.5.2"
+    eslint-plugin-compat: "npm:^4.0.2"
+    eslint-plugin-cypress: "npm:^2.10.3"
+    eslint-plugin-import: "npm:2.27.5"
+    eslint-plugin-jest: "npm:^27.1.4"
+    eslint-plugin-jsx-a11y: "npm:6.8.0"
+    eslint-plugin-react: "npm:7.33.2"
+    eslint-plugin-react-hooks: "npm:4.6.0"
+    eslint-plugin-react-perf: "npm:^3.3.1"
+    eslint-plugin-relay: "npm:^1.8.3"
+    eslint-plugin-simple-import-sort: "npm:^8.0.0"
+    graphql: "npm:14"
+    graphql-request: "npm:6"
+    i18next: "npm:^23.11.5"
+    i18next-browser-languagedetector: "npm:^8.0.0"
+    i18next-http-backend: "npm:^2.5.2"
+    identity-obj-proxy: "npm:^3.0.0"
+    jest: "npm:^29.7.0"
+    jest-environment-jsdom: "npm:^29.7.0"
+    jest-extended: "npm:^4.0.2"
+    net: "npm:^1.0.2"
+    next: "npm:13.5.6"
+    next-pwa: "npm:5.6.0"
+    perfume.js: "npm:9.2.0"
+    permissionless: "npm:0.1.26"
+    pino-pretty: "npm:^10.3.1"
+    postcss: "npm:^8.4.32"
+    prettier: "npm:3.0.3"
+    prettier-plugin-solidity: "npm:^1.3.1"
+    prettier-plugin-tailwindcss: "npm:^0.5.9"
+    react: "npm:^18"
+    react-dom: "npm:^18"
+    react-i18next: "npm:^14.1.2"
+    react-remove-scroll: "npm:^2.5.7"
+    rehype-pretty-code: "npm:0.12.3"
+    rehype-stringify: "npm:^10.0.0"
+    remark-parse: "npm:^11.0.0"
+    remark-rehype: "npm:^11.0.0"
+    scroll-into-view-if-needed: "npm:^3.1.0"
+    shikiji: "npm:^0.9.17"
+    shikiji-core: "npm:^0.9.17"
+    stylelint: "npm:^16.0.2"
+    stylelint-config-idiomatic-order: "npm:^10.0.0"
+    stylelint-config-standard: "npm:^35.0.0"
+    stylelint-order: "npm:^6.0.4"
+    tailwindcss: "npm:^3.4.0"
+    ts-jest: "npm:^29.1.1"
+    typescript: "npm:~5.3.3"
+    unified: "npm:^11.0.4"
+    viem: "npm:2.x"
+    wagmi: "npm:^2.9.2"
+    workbox-webpack-plugin: "npm:^7.0.0"
+  languageName: unknown
+  linkType: soft
+
 "ansi-escapes@npm:^4.2.1":
   version: 4.3.2
   resolution: "ansi-escapes@npm:4.3.2"
@@ -6461,21 +6474,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cross-fetch@npm:4.0.0, cross-fetch@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "cross-fetch@npm:4.0.0"
+  dependencies:
+    node-fetch: "npm:^2.6.12"
+  checksum: 10c0/386727dc4c6b044746086aced959ff21101abb85c43df5e1d151547ccb6f338f86dec3f28b9dbddfa8ff5b9ec8662ed2263ad4607a93b2dc354fb7fe3bbb898a
+  languageName: node
+  linkType: hard
+
 "cross-fetch@npm:^3.1.4, cross-fetch@npm:^3.1.5":
   version: 3.1.8
   resolution: "cross-fetch@npm:3.1.8"
   dependencies:
     node-fetch: "npm:^2.6.12"
   checksum: 10c0/4c5e022ffe6abdf380faa6e2373c0c4ed7ef75e105c95c972b6f627c3f083170b6886f19fb488a7fa93971f4f69dcc890f122b0d97f0bf5f41ca1d9a8f58c8af
-  languageName: node
-  linkType: hard
-
-"cross-fetch@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "cross-fetch@npm:4.0.0"
-  dependencies:
-    node-fetch: "npm:^2.6.12"
-  checksum: 10c0/386727dc4c6b044746086aced959ff21101abb85c43df5e1d151547ccb6f338f86dec3f28b9dbddfa8ff5b9ec8662ed2263ad4607a93b2dc354fb7fe3bbb898a
   languageName: node
   linkType: hard
 
@@ -8852,6 +8865,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-parse-stringify@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "html-parse-stringify@npm:3.0.1"
+  dependencies:
+    void-elements: "npm:3.1.0"
+  checksum: 10c0/159292753d48b84d216d61121054ae5a33466b3db5b446e2ffc093ac077a411a99ce6cbe0d18e55b87cf25fa3c5a86c4d8b130b9719ec9b66623259000c72c15
+  languageName: node
+  linkType: hard
+
 "html-tags@npm:^3.3.1":
   version: 3.3.1
   resolution: "html-tags@npm:3.3.1"
@@ -8944,12 +8966,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"i18next-browser-languagedetector@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "i18next-browser-languagedetector@npm:8.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+  checksum: 10c0/08a7c747ec18a0743b54390a0b42836d814b15fb49c92b90c259298e6a6e7e001ff9df99d0fd308283a34fceea53b4d9053aa1695a37f696bc04160017bbb524
+  languageName: node
+  linkType: hard
+
+"i18next-http-backend@npm:^2.5.2":
+  version: 2.5.2
+  resolution: "i18next-http-backend@npm:2.5.2"
+  dependencies:
+    cross-fetch: "npm:4.0.0"
+  checksum: 10c0/57cfbeeea40a751134e1521fac89b14b780c9ad87b74a4f7d7168a88a8b603efed9f5df455dddbb408f7e268eae5aa0a6888e47b9f10cb9482d812d4d6997ffa
+  languageName: node
+  linkType: hard
+
 "i18next@npm:22.5.1":
   version: 22.5.1
   resolution: "i18next@npm:22.5.1"
   dependencies:
     "@babel/runtime": "npm:^7.20.6"
   checksum: 10c0/a284f8d805ebad77114a830e60d5c59485a7f4d45179761f877249b63035572cff4103e5b4702669dff1a0e03b4e8b6df377bc871935f8215e43fd97e8e9e910
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^23.11.5":
+  version: 23.11.5
+  resolution: "i18next@npm:23.11.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+  checksum: 10c0/b0bec64250a3e529d4c51e2fc511406a85c5dde3d005d3aabe919551ca31dfc0a8f5490bf6e44649822e895a1fa91a58092d112367669cd11b2eb89e6ba90d1a
   languageName: node
   linkType: hard
 
@@ -12686,6 +12735,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-i18next@npm:^14.1.2":
+  version: 14.1.2
+  resolution: "react-i18next@npm:14.1.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.9"
+    html-parse-stringify: "npm:^3.0.1"
+  peerDependencies:
+    i18next: ">= 23.2.3"
+    react: ">= 16.8.0"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 10c0/cb8a83b3696639f083dc9f770d9d9e0681c0fe56f6b5fe24cd6facce08d363c37bd3440078e9d63abacabd7037b783e6b4e4d0c935de9c8dda7820bd4ef7e329
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -15102,6 +15169,13 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/8b29c790181e44c4c95b9ffed1a8c1b6c2396eb949b95697cc390ca8c49d88ef9e2cd56bd4800b90a9bbc93681ae8d63045fc6fa06e00d84f532bef77967e751
+  languageName: node
+  linkType: hard
+
+"void-elements@npm:3.1.0":
+  version: 3.1.0
+  resolution: "void-elements@npm:3.1.0"
+  checksum: 10c0/0b8686f9f9aa44012e9bd5eabf287ae0cde409b9a2854c5a2335cb83920c957668ac5876e3f0d158dd424744ac411a7270e64128556b451ed3bec875ef18534d
   languageName: node
   linkType: hard
 

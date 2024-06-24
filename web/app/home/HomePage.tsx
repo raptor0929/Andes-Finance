@@ -2,6 +2,8 @@
 import { useAccount } from 'wagmi';
 import Footer from '@/components/layout/footer/Footer';
 import Header from '@/components/layout/header/Header';
+import HeaderHome from '@/components/Home/HeaderHome';
+import TranslationProvider from '@/components/Global/TranslationProvider';
 
 /**
  * Use the page component to wrap the components
@@ -12,8 +14,8 @@ export default function HomePage() {
 
   return (
     <>
-      <Header />
-      <main className="container mx-auto flex flex-col px-8 py-16">
+      {/* <Header /> */}
+      {/* <main className="container mx-auto flex flex-col px-8 py-16">
         <div>
           <h2 className="text-xl">Developer information</h2>
           <br />
@@ -31,7 +33,10 @@ export default function HomePage() {
           </ul>
         </div>
       </main>
-      <Footer />
+      <Footer /> */}
+      <TranslationProvider>
+        <HeaderHome />
+      </TranslationProvider>
     </>
   );
 }

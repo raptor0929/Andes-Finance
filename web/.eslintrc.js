@@ -44,6 +44,10 @@ module.exports = {
     'react/function-component-definition': [
       'error',
       { namedComponents: 'function-declaration', unnamedComponents: 'function-expression' },
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
     ],
 
     // We prefer on/handle named events

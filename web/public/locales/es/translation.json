@@ -1,0 +1,7 @@
+{
+    "welcome": "Bienvenido a mi aplicación1111",
+    "data": {
+        "number": "esto es un numero",
+        "string": "esto es una cadena"
+    }
+}
