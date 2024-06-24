@@ -5,6 +5,7 @@ import OnchainProviders from '@/OnchainProviders';
 import { initAnalytics } from '@/utils/analytics';
 import { inter } from './fonts';
 import type { Metadata } from 'next';
+import Providers from '@/context/Providers';
 
 export const viewport = {
   width: 'device-width',
@@ -29,7 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.className}`}>
       <body className="flex flex-1 flex-col">
-        <OnchainProviders>{children}</OnchainProviders>
+        <Providers>
+          <OnchainProviders>{children}</OnchainProviders>
+        </Providers>
       </body>
       <GoogleAnalytics />
     </html>

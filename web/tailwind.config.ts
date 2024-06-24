@@ -1,7 +1,12 @@
-import type { Config } from 'tailwindcss';
+// import type { Config } from 'tailwindcss';
+const { nextui } = require('@nextui-org/react');
 
-const config: Config = {
-  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}'],
+const config = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     container: {
       center: true,
@@ -42,57 +47,41 @@ const config: Config = {
         'boat-color-yellow-70': '#FFD200',
         'boat-color-orange': '#f55925',
         'boat-gold': '#7b602f',
-        primary: {
-          normal: '#53E88B',
-          hover: '#80F5AC',
-          active: '#19CE5E',
-          disabled: '#53E88B80',
-          subtle: '#EFFEFA',
-          strong: '#0F863D',
-        },
-        secondary: {
-          normal: '#FEAD1D',
-          hover: '#FEC64B',
-          active: '#F88B08',
-          disabled: '#FEAD1D80',
-          subtle: '#FFF9EB',
-          strong: '#B64407',
-        },
-        tertiary: {
-          normal: '#15BE77',
-          hover: '#38CF8B',
-          active: '#08935B',
-          disabled: '#15BE7780',
-          subtle: '#D2F9E2',
-          strong: '#085D3E',
-        },
-        // Functional colors
-        success: {
-          normal: '#17D071',
-          hover: '#40E891',
-          active: '#0CAD5A',
-          disabled: '#17D07180',
-          subtle: '#D2F9E2',
-        },
-        information: {
-          normal: '#3268FF',
-          hover: '#5B91FF',
-          active: '#1743F9',
-          disabled: '#3268FF80',
-        },
-        warning: {
-          normal: '#FF8E10',
-          hover: '#FFA938',
-          active: '#F67100',
-          disabled: '#FF8E1080',
-        },
-        danger: {
-          normal: '#FA3116',
-          hover: '#FF7C6A',
-          active: '#E8321A',
-          disabled: '#FA311680',
-        },
-        // Other colors
+        primary: '#53E88B',
+        'primary-hover': '#80F5AC',
+        'primary-active': '#19CE5E',
+        'primary-disabled': '#53E88B80',
+        'primary-subtle': '#EFFEFA',
+        'primary-strong': '#0F863D',
+        secondary: '#FEAD1D',
+        'secondary-hover': '#FEC64B',
+        'secondary-active': '#F88B08',
+        'secondary-disabled': '#FEAD1D80',
+        'secondary-subtle': '#FFF9EB',
+        'secondary-strong': '#B64407',
+        tertiary: '#15BE77',
+        'tertiary-hover': '#38CF8B',
+        'tertiary-active': '#08935B',
+        'tertiary-disabled': '#15BE7780',
+        'tertiary-subtle': '#D2F9E2',
+        'tertiary-strong': '#085D3E',
+        success: '#17D071',
+        'success-hover': '#40E891',
+        'success-active': '#0CAD5A',
+        'success-disabled': '#17D07180',
+        'success-subtle': '#D2F9E2',
+        information: '#3268FF',
+        'information-hover': '#5B91FF',
+        'information-active': '#1743F9',
+        'information-disabled': '#3268FF80',
+        warning: '#FF8E10',
+        'warning-hover': '#FFA938',
+        'warning-active': '#F67100',
+        'warning-disabled': '#FF8E1080',
+        danger: '#FA3116',
+        'danger-hover': '#FF7C6A',
+        'danger-active': '#E8321A',
+        'danger-disabled': '#FA311680',
         text: {
           title: '#3D3D3D',
           body: '#656565',
@@ -112,7 +101,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  darkMode: 'class',
+  plugins: [nextui()],
 };
 
 export default config;

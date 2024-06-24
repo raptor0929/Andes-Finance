@@ -3,7 +3,6 @@ import { useAccount } from 'wagmi';
 import Footer from '@/components/layout/footer/Footer';
 import Header from '@/components/layout/header/Header';
 import HeaderHome from '@/components/Home/HeaderHome';
-import TranslationProvider from '@/components/Global/TranslationProvider';
 import Home from '@/components/Home';
 
 /**
@@ -35,10 +34,8 @@ export default function HomePage() {
         </div>
       </main>
       <Footer /> */}
-      <TranslationProvider>
-        {/* <HeaderHome /> */}
-        <Home />
-      </TranslationProvider>
+      {/* <HeaderHome /> */}
+      <Home />
     </>
   );
 }
