@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import Image from 'next/image';
 import LanguageSwitcher from '../Global/LanguageSwitcher';
 
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@nextui-org/react';
 
-const HeaderHome: React.FC = () => {
+interface ScrollComponentProps {
+  scrollToSection: (index: number) => void;
+  activeSection: number;
+}
+
+const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSection }) => {
+  console.log({ activeSection });
+  console.log({ scrollToSection });
   return (
     // <header className="bg-white p-4 shadow-md">
     //   <div className="container mx-auto flex items-center justify-between">
@@ -33,27 +40,37 @@ const HeaderHome: React.FC = () => {
     //     </div>
     //   </div>
     // </header>
+
     <Navbar className="bg-background-1 p-4" maxWidth={'2xl'}>
       <NavbarContent justify="end">
         <NavbarBrand>
-          <Link color="foreground" href="#">
+          <Link color={activeSection === 0 ? undefined : 'foreground'}>
             <Image src="/images/logo.svg" alt="Logo" width={300} height={300} />
           </Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="w-1/2 gap-20" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link
+            color={activeSection === 0 ? undefined : 'foreground'}
+            onPress={() => scrollToSection(0)}
+          >
             Inicio
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+        <NavbarItem>
+          <Link
+            color={activeSection === 1 ? undefined : 'foreground'}
+            onPress={() => scrollToSection(1)}
+          >
             Como funciona?
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link
+            color={activeSection === 2 ? undefined : 'foreground'}
+            onPress={() => scrollToSection(2)}
+          >
             Aprende
           </Link>
         </NavbarItem>

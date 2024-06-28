@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        urbanist: ['urbanist'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -47,9 +50,9 @@ const config = {
         'boat-color-yellow-70': '#FFD200',
         'boat-color-orange': '#f55925',
         'boat-gold': '#7b602f',
-        primary: '#53E88B',
+        primary: '#19CE5E',
         'primary-hover': '#80F5AC',
-        'primary-active': '#19CE5E',
+        'primary-active': '#53E88B',
         'primary-disabled': '#53E88B80',
         'primary-subtle': '#EFFEFA',
         'primary-strong': '#0F863D',

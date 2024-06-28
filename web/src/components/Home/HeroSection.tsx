@@ -7,7 +7,7 @@ import { Button } from '@nextui-org/react';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="bg-information py-20 text-white">
+    <section className=" bg-information text-white">
       <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left">
         <div className="mb-44 md:w-1/2">
           <p className="mb-6 text-lg">100% SEGURO Y CONFIABLE</p>
@@ -45,7 +45,13 @@ const HeroSection: React.FC = () => {
             Sabemos que obtener un préstamo no es sencillo, es por eso que te ayudamos a cumplir tus
             metas con micro créditos.
           </p>
-          <Button color="primary" variant="bordered" radius="full" className="text-black" size="lg">
+          <Button
+            color="primary"
+            variant="bordered"
+            radius="full"
+            className="font-urbanist text-black"
+            size="lg"
+          >
             CALCULA TU PRÉSTAMO
           </Button>
         </div>

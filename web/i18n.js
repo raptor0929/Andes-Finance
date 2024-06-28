@@ -31,7 +31,7 @@ i18n
     nonExplicitWhitelist: true,
     load: 'languageOnly',
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',  // Asegúrate de que esta ruta es correcta
+      loadPath: '/locales/{{lng}}/translation.json',  
     },
     react: {
       useSuspense: false,

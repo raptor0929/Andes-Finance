@@ -21,8 +21,8 @@ const GetStarted: React.FC = () => {
               cursos totalmente gratis para ti
             </a>
           </p>
-          <div className="relative">
-            <div className="absolute  left-52 -z-10 flex h-96 w-96 flex-col items-center justify-center rounded-full bg-warning-hover p-10 text-left">
+          <div className="relative overflow-hidden">
+            <div className="absolute  left-52 -z-10 flex h-96 w-96 flex-col items-center justify-center rounded-full bg-[#FFD028] p-10 text-left">
               <span className="w-3/4 pl-4 text-2xl text-black">
                 ¡Registrate ahora y obtén tus primer crédito con
               </span>
@@ -34,7 +34,7 @@ const GetStarted: React.FC = () => {
                 alt="Hero Image"
                 width={300}
                 height={300}
-                className="mt-32 rounded-lg"
+                className="relative -bottom-10 left-10 z-10 -ml-10"
               />
             </div>
           </div>
