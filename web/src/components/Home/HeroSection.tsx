@@ -4,18 +4,18 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@nextui-org/react';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className=" bg-information text-white">
       <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left">
         <div className="mb-44 md:w-1/2">
-          <p className="mb-6 text-lg">100% SEGURO Y CONFIABLE</p>
-          <h1 className="mb-6 text-6xl font-medium">
-            Obtén un préstamo mientras juegas y aprendes
-          </h1>
+          <p className="mb-6 text-lg">{t('hereSection.shortDescription')}</p>
+          <h1 className="mb-6 text-6xl font-medium">{t('hereSection.title')}</h1>
           <Button color="primary" className="text-black" radius="full" size="lg">
-            EMPECEMOS
+            {t('hereSection.start')}
           </Button>
         </div>
         <div className="mt-32 w-1/2">
@@ -40,11 +40,8 @@ const HeroSection: React.FC = () => {
             className="mx-auto"
           ></iframe>
         </div>
-        <div className="inline-block w-full bg-white p-8 shadow-lg md:w-1/2">
-          <p className="mb-4 text-4xl text-black">
-            Sabemos que obtener un préstamo no es sencillo, es por eso que te ayudamos a cumplir tus
-            metas con micro créditos.
-          </p>
+        <div className="inline-block flex w-full flex-col items-center justify-center bg-white p-8 shadow-lg md:w-1/2">
+          <p className="mb-4 text-4xl text-black">{t('hereSection.videoDescription')}</p>
           <Button
             color="primary"
             variant="bordered"
@@ -52,7 +49,7 @@ const HeroSection: React.FC = () => {
             className="font-urbanist text-black"
             size="lg"
           >
-            CALCULA TU PRÉSTAMO
+            {t('hereSection.calculate')}
           </Button>
         </div>
       </div>

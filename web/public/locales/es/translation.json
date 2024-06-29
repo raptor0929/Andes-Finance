@@ -1,10 +1,76 @@
 {
-    "welcome": "Bienvenido a mi aplicación1111",
+    "welcome": "Bienvenido a mi inglés",
     "data": {
-        "number": "esto es un numero",
+        "number": "esto es un número",
         "string": "esto es una cadena"
     },
     "navbar": {
-        "home": "Inicio"
+        "home": "Inicio",
+        "howWorks": "¿Cómo funciona?",
+        "learning": "Aprendiendo",
+        "logIn": "INICIAR SESIÓN",
+        "signUp": "REGISTRARSE"
+    },
+    "hereSection": {
+        "shortDescription": "100% seguro y confiable",
+        "title": "Obtén un préstamo mientras aprendes y juegas.",
+        "start": "Empecemos",
+        "videoDescription":"Sabemos que obtener un préstamo no es fácil, por eso te ayudamos a alcanzar tus objetivos con microcréditos.",
+        "calculate": "Calcula tu préstamo"
+    },
+    "howItWorks": {
+        "mainTitle": "¿Cómo funciona?",
+        "firstTitle": "Comienza tu camino financiero",
+        "firstDescription": "Comienza a construir tu historial crediticio en blockchain y adquiere préstamos.",
+        "secondTitle": "Aprende gratis",
+        "secondDescription": "Aprende cursos básicos de finanzas descentralizadas y adquiere tu primer préstamo cripto.",
+        "thirdTitle": "Acepta desafíos",
+        "thirdDescription": "Desbloquea desafíos cada semana mientras aprendes y obtén un préstamo",
+        "fourthTitle": "Obtén tu préstamo",
+        "fourthDescription": "Obtén tu primer préstamo cripto y construye historial"
+    },
+    "getStarted": {
+        "title": "¿Cómo empezar?",
+        "description": "Para obtener un préstamo con nosotros debes completar 4 desafíos en 4 semanas. Y si eres nuevo, no te preocupes, tenemos cursos totalmente gratuitos para ti.",
+        "imageDescription": "¡Registrate ahora y obtén tus primer crédito con 10$ de regalo!",
+        "firstCourse": "Conecta o abre tu primera cartera cripto",
+        "firstDescription": "¿Quieres obtener un préstamo cripto? ¿No sabes por dónde empezar? El primer paso es crear una cartera.",
+        "secondCourse": "Ahorra cripto por 3 semanas",
+        "secondDescription": "¿Quieres obtener un préstamo cripto? ¿No sabes por dónde empezar? El primer paso es crear una cartera.",
+        "thirdCourse": "Haz una transferencia/puente fácil",
+        "thirdDescription": "¿Quieres obtener un préstamo cripto? ¿No sabes por dónde empezar? El primer paso es crear una cartera.",
+        "fourthCourse": "Transfiere dinero a tu cartera",
+        "fourthDescription": "¿Quieres obtener un préstamo cripto? ¿No sabes por dónde empezar? El primer paso es crear una cartera."
+    },
+    "calculateLoan": {
+        "letStart": "Vamos a empezar",
+        "title": "Calcula tu préstamo",
+        "shortDescription": "¿Cuánto necesitas?",
+        "subtitle": "¿En cuántos meses quieres pagar?",
+        "finalPayment": "Pago final",
+        "interest": "interés",
+        "iWantIt": "Lo quiero"
+    },
+    "freeCourses": {
+        "shortDescription": "¿Necesitas aprender más?",
+        "title": "Empecemos con cursos gratuitos",
+        "description": "Elige entre una variedad de cursos aquellos que sean relevantes para tu perfil.",
+        "firstCourseTitle": "Defi",
+        "firstCourseDescription": "Entiende las finanzas descentralizadas, clave para tu camino financiero",
+        "secondCourseTitle": "Base",
+        "secondCourseDescription": "Aprende sobre la blockchain que está revolucionando el mundo cripto",
+        "thirdCourseTitle": "Web",
+        "thirdCourseDescription": "aprende los conceptos básicos de web3 y blockchain"
+    },
+    "investorInterest": {
+        "title": "¿Quieres ser inversor?",
+        "description": "Déjanos tu información y te contactaremos para contarte todos los beneficios de ser inversor con nosotros.",
+        "labelName": "NOMBRES Y APELLIDOS",
+        "inputName": "¿Podrías escribir tu nombre?",
+        "labelEmail": "CORREO ELECTRÓNICO",
+        "inputEmail": "¿Podrías escribir tu correo electrónico?",
+        "labelPhone": "número de teléfono",
+        "inputPhone": "¿Podrías escribir tu número de teléfono?",
+        "send": "Enviar"
     }
 }

@@ -5,6 +5,73 @@
         "string": "this is a string"
     },
     "navbar": {
-        "home": "Home"
+        "home": "Home",
+        "howWorks": "How it works?",
+        "learning": "Learning",
+        "logIn": "LOG IN",
+        "signUp": "SIGN UP"
+    },
+    "hereSection": {
+        "shortDescription": "100% safe & reliable",
+        "title": "Get a loan while you are learning and playing.",
+        "start": "Let's start",
+        "videoDescription":"We know that obtaining a loan is not easy, that is why we help you achieve your goals with microcredits.",
+        "calculate": "Calculate your loan"
+    },
+    "howItWorks": {
+        "mainTitle": "How it works?",
+        "firstTitle": "Start your financial path",
+        "firstDescription": "Start building your credit history on blockchain and acquire loans.",
+        "secondTitle":"Learn for free",
+        "secondDescription": "Learn basic decentralized finance courses and acquire your first crypto loan.",
+        "thirdTitle": "Take challenges",
+        "thirdDescription": "Unlock challenges every week as you learn and get a loan",
+        "fourthTitle": "Get your loan",
+        "fourthDescription": "Get your first crypto loan and build history"
+    },
+    "getStarted": {
+        "title": "How to start?",
+        "description": "To obtain a loan with us you must complete 4 challenges in 4 weeks. And if you are new, don't worry, we have totally free courses for you.",
+        "imageDescription": "Sign up now and get your first credit with a $10 bonus!",
+        "firstCourse": "Connect or open your first crypto wallet",
+        "firstDescription": "Do you want to get a crypto loan? Don't know where to start? The first step is to create a wallet..",
+        "secondCourse": "Save crypto for 3 weeks",
+        "secondDescription": "Do you want to get a crypto loan? Don't know where to start? The first step is to create a wallet..",
+        "thirdCourse": "Make an easy transfer/bridge",
+        "thirdDescription": "Do you want to get a crypto loan? Don't know where to start? The first step is to create a wallet..",
+        "fourthCourse": "Transfer money to your wallet",
+        "fourthDescription": "Do you want to get a crypto loan? Don't know where to start? The first step is to create a wallet.."
+    },
+    "calculateLoan": {
+        "letStart": "Let´s start",
+        "title": "Calculate your loan",
+        "shortDescription": "How much do you need?",
+        "subtitle": "In how many months do you want to pay?",
+        "finalPayment": "Final Payment",
+        "interest": "interest",
+        "iWantIt": "I want it"
+    },
+    "freeCourses": {
+        "shortDescription": "Do you need to learn more?",
+        "title": "Let´s start with free courses",
+        "description": "Choose from a variety of courses those that are relevant to your profile.",
+        "firstCourseTitle": "Defi",
+        "firstCourseDescription": "Understand decentralized finance, key to your financial path",
+        "secondCourseTitle": "Base",
+        "secondCourseDescription": "Learn about the blockchain that is revolutionizing the crypto world",
+        "thirdCourseTitle": "Web",
+        "thirdCourseDescription": "learn the basic concepts of web3 and blockchain"
+    },
+    "investorInterest": {
+        "title": "Do you want to be an investor?",
+        "description": "Leave us your information and we will contact you to tell you all the benefits of being an investor with us.",
+        "labelName":"NAMES AND SURNAMES",
+        "inputName": "Could your write your phone names?",
+        "labelEmail": "EMAIL",
+        "inputEmail": "Could your write your phone email?",
+        "labelPhone": "phone number",
+        "inputPhone": "Could your write your phone number?",
+        "send": "Send"
     }
+
 }

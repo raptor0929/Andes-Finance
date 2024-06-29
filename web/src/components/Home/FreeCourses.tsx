@@ -1,33 +1,33 @@
 import React from 'react';
 import { Card, CardHeader, CardBody, Button } from '@nextui-org/react';
 import Image from 'next/image';
-
-const cards = [
-  {
-    title: 'Defi',
-    description:
-      'Enim augue integer facilisi et urna diam pellentesque lectus. Odio at nunc sit facilisis.',
-  },
-  {
-    title: 'Base',
-    description:
-      'Enim augue integer facilisi et urna diam pellentesque lectus. Odio at nunc sit facilisis.',
-  },
-  {
-    title: 'Web3',
-    description:
-      'Enim augue integer facilisi et urna diam pellentesque lectus. Odio at nunc sit facilisis.',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 const FreeCourses = () => {
+  const { t } = useTranslation();
+
+  const cards = [
+    {
+      title: `${t('freeCourses.firstCourseTitle')}`,
+      description: `${t('freeCourses.firstCourseDescription')}`,
+    },
+    {
+      title: `${t('freeCourses.secondCourseTitle')}`,
+      description: `${t('freeCourses.secondCourseDescription')}`,
+    },
+    {
+      title: `${t('freeCourses.thirdCourseTitle')}`,
+      description: `${t('freeCourses.thirdCourseDescription')}`,
+    },
+  ];
+
   return (
     <div className="flex bg-[#EEF2FF] px-28 py-24 text-black">
       <div className="text-bold flex w-1/2 flex-col gap-10  px-4 py-10">
-        <span className="font-urbanist text-xl">¿NECESITAS ENTENDER MEJOR?</span>
-        <h1 className="w-full font-urbanist text-6xl">Aprende con los cursos gratuitos</h1>
+        <span className="font-urbanist text-xl">{t('freeCourses.shortDescription')}</span>
+        <h1 className="w-full font-urbanist text-6xl">{t('freeCourses.title')}</h1>
         <span className="mt-4 w-full font-urbanist text-xl text-gray-400">
-          Enim augue integer facilisi et urna diam pellentesque lectus.
+          {t('freeCourses.description')}
         </span>
       </div>
 

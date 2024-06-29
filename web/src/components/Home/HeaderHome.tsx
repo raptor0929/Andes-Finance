@@ -11,7 +11,7 @@ interface ScrollComponentProps {
 }
 
 const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSection }) => {
-  const { t } = useTranslation('navbar');
+  const { t } = useTranslation();
   return (
     // <header className="bg-white p-4 shadow-md">
     //   <div className="container mx-auto flex items-center justify-between">
@@ -63,7 +63,7 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
             color={activeSection === 1 ? undefined : 'foreground'}
             onPress={() => scrollToSection(1)}
           >
-            Como funciona?
+            {t('navbar.howWorks')}
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -71,7 +71,7 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
             color={activeSection === 2 ? undefined : 'foreground'}
             onPress={() => scrollToSection(2)}
           >
-            Aprende
+            {t('navbar.learning')}
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -86,7 +86,7 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
             variant="bordered"
             className="text-black "
           >
-            INICIA SESION
+            {t('navbar.logIn')}
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -99,7 +99,7 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
             radius="full"
             className="text-black "
           >
-            REGISTRATE
+            {t('navbar.signUp')}
           </Button>
         </NavbarItem>
         <NavbarItem>

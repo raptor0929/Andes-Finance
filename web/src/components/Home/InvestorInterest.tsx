@@ -1,16 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
 import { Input, Button } from '@nextui-org/react';
+import { useTranslation } from 'react-i18next';
 
 const InvestorInterest = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex overflow-hidden bg-white px-28 py-14 text-black">
       <div className=" flex w-1/3 flex-col justify-center gap-10">
-        <h1 className="font-urbanist text-7xl">¿Te gustaría ser un inversor?</h1>
-        <p className="font-urbanist text-lg text-gray-500">
-          Dejanos tus datos y te contactaremos para contarte todos los beneficios de ser inversor
-          con nosotros.
-        </p>
+        <h1 className="font-urbanist text-7xl">{t('investorInterest.title')}</h1>
+        <p className="font-urbanist text-lg text-gray-500">{t('investorInterest.description')}</p>
       </div>
       <Image
         src="/images/home/investor-logo.png"
@@ -21,7 +20,7 @@ const InvestorInterest = () => {
       />
       <div className="flex w-1/3 flex-col justify-center gap-7 text-black">
         <div className="flex flex-col gap-2">
-          <label className="ml-6 text-sm">NAMES AND SURNAMES</label>
+          <label className="ml-6 text-sm">{t('investorInterest.labelName')}</label>
           <Input
             key={'outside'}
             size="lg"
@@ -30,11 +29,11 @@ const InvestorInterest = () => {
             variant="bordered"
             labelPlacement={'outside'}
             className="w-ful text-black"
-            placeholder="Escribe tus nombres"
+            placeholder={t('investorInterest.inputName')}
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="ml-6 text-sm">CORREO ELECTRONICO</label>
+          <label className="ml-6 text-sm">{t('investorInterest.labelEmail')}</label>
           <Input
             key={'outside'}
             size="lg"
@@ -42,11 +41,11 @@ const InvestorInterest = () => {
             variant="bordered"
             type="email"
             labelPlacement={'outside'}
-            placeholder="Escribe tu correo electronico"
+            placeholder={t('investorInterest.inputEmail')}
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="ml-6 text-sm">NUMERO DE CELULAR</label>
+          <label className="ml-6 text-sm">{t('investorInterest.labelPhone')}</label>
           <Input
             key={'outside'}
             size="lg"
@@ -55,11 +54,13 @@ const InvestorInterest = () => {
             variant="bordered"
             labelPlacement={'outside'}
             className="w-ful text-black"
-            placeholder="Escribe tu numero de celular"
+            placeholder={t('investorInterest.inputPhone')}
           />
         </div>
         <Button className="flex w-1 items-center justify-center rounded-full bg-primary px-14 py-7 text-center  text-white">
-          <span className="mt-1 font-urbanist text-base font-bold text-black">SEND</span>
+          <span className="mt-1 font-urbanist text-base font-bold text-black">
+            {t('investorInterest.send')}
+          </span>
         </Button>
       </div>
     </div>
