@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
             className="mx-auto"
           ></iframe>
         </div>
-        <div className="inline-block flex w-full flex-col items-center justify-center bg-white p-8 shadow-lg md:w-1/2">
+        <div className="flex w-full flex-col items-center justify-center bg-white p-8 shadow-lg md:w-1/2">
           <p className="mb-4 text-4xl text-black">{t('hereSection.videoDescription')}</p>
           <Button
             color="primary"
