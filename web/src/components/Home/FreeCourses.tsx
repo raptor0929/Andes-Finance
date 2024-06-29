@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@nextui-org/react';
-import { Card, CardHeader, CardBody } from '@nextui-org/react';
+import { Card, CardHeader, CardBody, Button } from '@nextui-org/react';
 import Image from 'next/image';
 
 const cards = [
@@ -26,20 +25,12 @@ const FreeCourses = () => {
     <div className="flex bg-[#EEF2FF] px-28 py-24 text-black">
       <div className="text-bold flex w-1/2 flex-col gap-10  px-4 py-10">
         <span className="font-urbanist text-xl">¿NECESITAS ENTENDER MEJOR?</span>
-        <h1 className="font-urbanist w-full text-6xl">Aprende con los cursos gratuitos</h1>
-        <span className="font-urbanist mt-4 w-full text-xl text-gray-400">
+        <h1 className="w-full font-urbanist text-6xl">Aprende con los cursos gratuitos</h1>
+        <span className="mt-4 w-full font-urbanist text-xl text-gray-400">
           Enim augue integer facilisi et urna diam pellentesque lectus.
         </span>
       </div>
-      {/* <div className="w-1/5 bg-warning">
-        <h1>Defi</h1>
-        <p>
-          Enim augue integer facilisi et urna diam pellentesque lectus. Odio at nunc sit facilisis.
-        </p>
-        <Button isIconOnly color="primary" aria-label="Take a photo">
-          <MdArrowOutward className="text-black" />
-        </Button>
-      </div> */}
+
       <div className="flex w-1/2 space-x-8 overflow-x-auto px-4 py-8">
         {cards.map((card, index) => (
           <Card key={index} className="w-2/3 flex-shrink-0 gap-4 px-10 py-10">

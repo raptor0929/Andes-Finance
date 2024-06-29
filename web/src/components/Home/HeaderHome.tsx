@@ -3,6 +3,7 @@ import Image from 'next/image';
 import LanguageSwitcher from '../Global/LanguageSwitcher';
 
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@nextui-org/react';
+import { useTranslation } from 'react-i18next';
 
 interface ScrollComponentProps {
   scrollToSection: (index: number) => void;
@@ -10,8 +11,7 @@ interface ScrollComponentProps {
 }
 
 const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSection }) => {
-  console.log({ activeSection });
-  console.log({ scrollToSection });
+  const { t } = useTranslation('navbar');
   return (
     // <header className="bg-white p-4 shadow-md">
     //   <div className="container mx-auto flex items-center justify-between">
@@ -55,7 +55,7 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
             color={activeSection === 0 ? undefined : 'foreground'}
             onPress={() => scrollToSection(0)}
           >
-            Inicio
+            {t('navbar.home')}
           </Link>
         </NavbarItem>
         <NavbarItem>

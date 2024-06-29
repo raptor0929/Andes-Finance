@@ -16,6 +16,7 @@ const Home: React.FC = () => {
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
   ];
 
   const scrollToSection = (index: number) => {
@@ -42,7 +43,9 @@ const Home: React.FC = () => {
       <div ref={sectionRefs[1]}>
         <HowItWorks />
       </div>
-      <GetStarted />
+      <div ref={sectionRefs[4]}>
+        <GetStarted />
+      </div>
       <CalculateLoan />
       <div ref={sectionRefs[2]}>
         <FreeCourses />

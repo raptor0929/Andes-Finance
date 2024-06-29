@@ -3,5 +3,8 @@
     "data": {
         "number": "esto es un numero",
         "string": "esto es una cadena"
+    },
+    "navbar": {
+        "home": "Inicio"
     }
 }

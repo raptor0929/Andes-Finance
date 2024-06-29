@@ -3,5 +3,8 @@
     "data": {
         "number": "this is a number",
         "string": "this is a string"
+    },
+    "navbar": {
+        "home": "Home"
     }
 }

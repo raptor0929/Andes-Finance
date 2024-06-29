@@ -9,7 +9,7 @@ const LanguageSwitcher: React.FC = () => {
   useEffect(() => {
     const storedLanguage = localStorage.getItem('i18nextLng') || 'en';
     setSelectedLanguage(storedLanguage);
-    i18n.changeLanguage(storedLanguage);
+    // i18n.changeLanguage(storedLanguage);
   }, []);
 
   const changeLanguage = (lng: React.Key) => {
