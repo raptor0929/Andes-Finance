@@ -50,7 +50,7 @@ const page = () => {
               </div>
             </div>
 
-            <Link href={'/dashboard/laon'} passHref>
+            <Link href={'/dashboard/loan'} passHref>
               <Button radius="full" color="primary" className="px-16 py-8 text-lg">
                 CONTINUAR
               </Button>
