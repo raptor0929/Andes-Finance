@@ -12,7 +12,7 @@ const CalculateLoan: React.FC = () => {
       <div className="ml-40 flex h-1/2 w-2/3 flex-col gap-4 bg-white px-20 py-14 pr-64">
         <div className="flex flex-col gap-2">
           <p>Empecemos</p>
-          <h2 className="font-urbanist mb-4 text-7xl">Calcula tu préstamo</h2>
+          <h2 className="mb-4 font-urbanist text-7xl">Calcula tu préstamo</h2>
         </div>
         <p>¿Cuanto necesitas?</p>
         <div className="flex w-full bg-stroke-2 px-10 py-2">

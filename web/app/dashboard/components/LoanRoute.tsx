@@ -18,38 +18,39 @@ const challenges = [
     number: '01',
     title: 'OPEN OR CONNECT YOUR ACCOUNT',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    status: 'done',
-    link: '/dashboard/challenges/01',
+    status: 'no-done',
+    link: '/dashboard/challenge/01',
   },
   {
     number: '02',
     title: 'ABRE UNA CUENTA FARCASTER',
     subtitle: 'Y conecta con coinbase',
-    status: 'block',
-    link: '/dashboard/challenges/02',
+    status: 'no-done',
+    link: '/dashboard/challenge/02',
   },
   {
     number: '03',
     title: 'AHORRA DURANTE 3 SEMANAS',
     subtitle: 'Y conecta con coinbase',
-    status: 'block',
-    link: '/dashboard/challenges/03',
+    status: 'no-done',
+    link: '/dashboard/challenge/03',
   },
   {
     number: '04',
     title: 'HAZ UNA TRANSFERENCIA SENCILLA',
     subtitle: 'Y conecta con coinbase',
-    status: 'block',
-    link: '/dashboard/challenges/04',
+    status: 'no-done',
+    link: '/dashboard/challenge/04',
   },
   {
     number: '05',
     title: 'OBTÉN TU PRÉSTAMO',
     subtitle: 'Elige cuánto deseas que te prestemos y en cuanto tiempo.',
-    status: 'block',
-    link: '/challenge-05',
+    status: 'no-done',
+    link: '/dashboard/get-loan',
   },
 ];
+
 const LoanRoute = () => {
   return (
     <div className="h-full bg-white p-10">
