@@ -18,7 +18,7 @@ const challenges = [
     number: '01',
     title: 'OPEN OR CONNECT YOUR ACCOUNT',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    status: 'no-done',
+    status: 'done',
     link: '/dashboard/challenge/01',
   },
   {
@@ -54,7 +54,7 @@ const challenges = [
 function LoanRoute() {
   return (
     <div className="h-full bg-white p-10">
-      <h1 className="font-urbanist text-3xl text-[#3268FF]">
+      <h1 className="pb-2 font-urbanist text-3xl text-[#3268FF]">
         Start the route to request your loan!
       </h1>
       <span className="text-gray-400">Completa estos 4 retos durante 4 semanas</span>
@@ -71,12 +71,12 @@ function LoanRoute() {
           <TableColumn>ROLE</TableColumn>
           <TableColumn>STATUS</TableColumn>
         </TableHeader>
-        <TableBody className="border-separate  border-spacing-y-3">
+        <TableBody className="">
           {challenges.map((challenge, index) => {
             return (
-              <TableRow key={index} className="mb-10 text-black">
+              <TableRow key={index} className=" text-black">
                 <TableCell>
-                  <div className="relative inline-block">
+                  <div className="relative inline-block w-10 ">
                     <Badge
                       content={
                         <Image
@@ -96,14 +96,14 @@ function LoanRoute() {
                     >
                       <Image
                         src="/images/circle.svg"
-                        width={50}
-                        height={50}
+                        width={150}
+                        height={150}
                         alt="circle"
                         className={challenge.status !== 'done' ? 'opacity-25' : 'opacity-100'}
                       />
                     </Badge>
                     <span
-                      className={`absolute inset-0 z-10 flex items-center justify-center text-xl  ${
+                      className={`absolute inset-0 z-10 flex items-center justify-center  ${
                         challenge.status === 'done' ? 'text-white' : 'text-[#8AA9FF]'
                       }`}
                     >
@@ -112,8 +112,8 @@ function LoanRoute() {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <p className="text-xl font-bold">{challenge.title}</p>
-                  <span className="text-gray-400">{challenge.subtitle}</span>
+                  <p className="text-sm font-bold">{challenge.title}</p>
+                  <p className="text-xs text-gray-400">{challenge.subtitle}</p>
                 </TableCell>
                 <TableCell className="flex w-full items-center justify-center">
                   {challenge.status === 'done' ? (
