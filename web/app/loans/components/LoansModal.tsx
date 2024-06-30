@@ -10,7 +10,7 @@ import {
 } from '@nextui-org/react';
 import Image from 'next/image';
 
-function LoansModal({ isOpen, onOpenChange }: unknown) {
+function LoansModal({ isOpen, onOpenChange }) {
   return (
     <Modal
         isOpen={isOpen}

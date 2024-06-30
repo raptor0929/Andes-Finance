@@ -1,10 +1,10 @@
 import { useCallback } from 'react';
 import { Name } from '@coinbase/onchainkit/identity';
+import { Avatar } from '@nextui-org/react';
+import { Snippet } from '@nextui-org/snippet';
 import { usePrivy } from '@privy-io/react-auth';
 import { ExitIcon } from '@radix-ui/react-icons';
 import { useBiconomy } from '@/context/BiconomyContext';
-import { Snippet } from '@nextui-org/snippet';
-import { Avatar } from '@nextui-org/react';
 // import { useAccount, useDisconnect } from 'wagmi';
 
 export function AccountInfoPanel() {

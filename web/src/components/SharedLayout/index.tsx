@@ -1,12 +1,12 @@
 // /app/common/SharedLayout.tsx
 "use client";
 import React, { ReactNode, useEffect } from 'react';
-import Sidebar from './Sidebar';
-import Navbar from './Navbar';
 import { usePrivy } from '@privy-io/react-auth';
 import { useRouter } from 'next/navigation';
+import Navbar from './Navbar';
+import Sidebar from './Sidebar';
 
-interface SharedLayoutProps {
+type SharedLayoutProps = {
   children: ReactNode;
 }
 

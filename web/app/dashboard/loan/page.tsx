@@ -16,8 +16,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import SharedLayout from '@/components/SharedLayout';
-import RequestLoanButton from './RequestLoanButton';
 import { useBiconomy } from '@/context/BiconomyContext';
+import RequestLoanButton from './RequestLoanButton';
 
 const page = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

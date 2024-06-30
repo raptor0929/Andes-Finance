@@ -1,10 +1,5 @@
 'use client';
-import { useSession, useUserOpWait, Options } from '@biconomy/use-aa';
-import { encodeFunctionData, parseAbi } from 'viem';
-import { Button } from '@nextui-org/react';
 import { useEffect } from 'react';
-
-import { baseSepolia } from 'viem/chains';
 import {
   PaymasterMode,
   createSessionSmartAccountClient,
@@ -14,6 +9,11 @@ import {
   Session,
   getSingleSessionTxParams,
 } from '@biconomy/account';
+import { useSession, useUserOpWait, Options } from '@biconomy/use-aa';
+import { Button } from '@nextui-org/react';
+import { encodeFunctionData, parseAbi } from 'viem';
+
+import { baseSepolia } from 'viem/chains';
 import { useBiconomy } from '@/context/BiconomyContext';
 import { INSTALLMENT_LOAN_CONTRACT_ADDRESS } from '../constants';
 
@@ -21,7 +21,7 @@ const withSponsorship = {
   paymasterServiceData: { mode: PaymasterMode.SPONSORED },
 };
 
-const RequestLoanButton = ({ amount, duration }) => {
+function RequestLoanButton({ amount, duration }) {
   // const { mutate, data: userOpResponse, error, isPending } = useSession();
   const { sessionStorageClient } = useBiconomy();
 
@@ -70,6 +70,6 @@ const RequestLoanButton = ({ amount, duration }) => {
       <Button onClick={handleRequestLoan}>REQUEST LOAN</Button>
     </div>
   );
-};
+}
 
 export default RequestLoanButton;

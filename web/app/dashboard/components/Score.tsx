@@ -1,6 +1,6 @@
 'use client';
-import useWindowSize from '@/hooks/useWindowSize';
 import Image from 'next/image';
+import useWindowSize from '@/hooks/useWindowSize';
 
 type IScore = {
   title: string;

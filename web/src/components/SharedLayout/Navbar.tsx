@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import AccountConnect from '../layout/header/AccountConnect';
-import LanguageSwitcher from '../Global/LanguageSwitcher';
-import CreateSession from '../layout/header/CreateSession';
 import { useBiconomy } from '@/context/BiconomyContext';
+import LanguageSwitcher from '../Global/LanguageSwitcher';
+import AccountConnect from '../layout/header/AccountConnect';
+import CreateSession from '../layout/header/CreateSession';
 
 function Navbar() {
   const { smartAccountAddress } = useBiconomy();

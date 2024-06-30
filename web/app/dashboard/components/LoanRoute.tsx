@@ -12,8 +12,8 @@ import {
 import { Badge } from '@nextui-org/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useGame } from '@/components/Global/GameProvider';
 import { useRouter } from 'next/navigation';
+import { useGame } from '@/components/Global/GameProvider';
 
 const challenges = [
   {

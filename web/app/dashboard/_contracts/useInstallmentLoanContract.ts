@@ -1,5 +1,6 @@
 import { baseSepolia } from 'viem/chains';
 import { generateContractHook } from '@/hooks/contracts';
+import { INSTALLMENT_LOAN_CONTRACT_ADDRESS } from '../constants';
 import InstallmentLoanABI from './InstallmentLoanABI';
 
 /**
@@ -9,7 +10,7 @@ export const useInstallmentLoanContract = generateContractHook({
   abi: InstallmentLoanABI,
   [baseSepolia.id]: {
     chain: baseSepolia,
-    address: '0x346E69073BE72D03806504E9434c5e6811d33f43',
+    address: INSTALLMENT_LOAN_CONTRACT_ADDRESS,
   },
 
   // ... more chains for this contract go here

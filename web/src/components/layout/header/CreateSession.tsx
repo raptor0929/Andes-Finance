@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { useCreateSession, useUserOpWait, Options } from '@biconomy/use-aa';
-import { Button } from '@nextui-org/react';
 import {
   PaymasterMode,
   createSmartAccountClient,
@@ -9,13 +7,15 @@ import {
   Policy,
   createSessionKeyEOA,
 } from '@biconomy/account';
-import { useBiconomy } from '@/context/BiconomyContext';
+import { useCreateSession, useUserOpWait, Options } from '@biconomy/use-aa';
+import { Button } from '@nextui-org/react';
 import { baseSepolia } from 'viem/chains';
+import { useBiconomy } from '@/context/BiconomyContext';
 import { INSTALLMENT_LOAN_CONTRACT_ADDRESS } from 'app/dashboard/constants';
 // import { BiconomyProvider } from '@/context/BiconomyContext';
 // import { BiconomyProvider } from '@biconomy/use-aa';
 
-const CreateSession = () => {
+function CreateSession() {
   const { smartAccount: usersSmartAccount, smartAccountAddress, setSessionStorageClient } = useBiconomy();
   if (!usersSmartAccount || !smartAccountAddress) {
     console.log('*** No Biconomy smart account ***');
@@ -77,6 +77,6 @@ const CreateSession = () => {
       </Button>
     </div>
   );
-};
+}
 
 export default CreateSession;

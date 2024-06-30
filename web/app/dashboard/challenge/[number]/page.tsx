@@ -1,5 +1,6 @@
 'use client';
 import React, { useRef, useState } from 'react';
+import { Button } from '@nextui-org/button';
 import {
   Modal,
   ModalContent,
@@ -8,14 +9,13 @@ import {
   ModalFooter,
   useDisclosure,
 } from '@nextui-org/modal';
-import { usePathname, useRouter } from 'next/navigation';
-import SharedLayout from '@/components/SharedLayout';
-import { useGame } from '@/components/Global/GameProvider';
-import { Button } from '@nextui-org/button';
-import { FaUpload } from 'react-icons/fa';
 import { Input } from '@nextui-org/react';
-import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
+import { FaUpload } from 'react-icons/fa';
+import { useGame } from '@/components/Global/GameProvider';
+import SharedLayout from '@/components/SharedLayout';
 
 const page = () => {
   const pathname = usePathname();
@@ -107,8 +107,8 @@ const page = () => {
                   </div>
                 ) : (
                   <div className="mt-6 w-full max-w-md">
-                    <h3 className="text-lg font-semibold"></h3>
-                    <ul className="mt-2"></ul>
+                    <h3 className="text-lg font-semibold" />
+                    <ul className="mt-2" />
                   </div>
                 )}
               </div>
@@ -187,7 +187,7 @@ const page = () => {
                       variant="bordered"
                       type="email"
                       labelPlacement="outside"
-                      placeholder={'Pega aquí la dirección'}
+                      placeholder="Pega aquí la dirección"
                       className="text-black"
                     />
                   </div>
@@ -202,7 +202,7 @@ const page = () => {
                       variant="bordered"
                       type="email"
                       labelPlacement="outside"
-                      placeholder={'Pega aquí la dirección '}
+                      placeholder="Pega aquí la dirección "
                       className="text-black"
                     />
                   </div>
@@ -219,7 +219,7 @@ const page = () => {
                       variant="bordered"
                       type="email"
                       labelPlacement="outside"
-                      placeholder={'Pega aquí la dirección'}
+                      placeholder="Pega aquí la dirección"
                       className="text-black"
                     />
                   </div>

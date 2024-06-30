@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from '@nextui-org/react';
 import { useTranslation } from 'react-i18next';
+import AndesFinanceLogo from '../Global/AndesFinanceLogo';
 import LanguageSwitcher from '../Global/LanguageSwitcher';
 import AccountConnect from '../layout/header/AccountConnect';
-import AndesFinanceLogo from '../Global/AndesFinanceLogo';
 
 type ScrollComponentProps = {
   scrollToSection: (index: number) => void;

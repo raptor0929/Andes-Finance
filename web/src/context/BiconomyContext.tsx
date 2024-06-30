@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback, useMemo } from 'react';
 import { BiconomySmartAccountV2, createSmartAccountClient } from '@biconomy/account';
 import { ConnectedWallet, usePrivy, useWallets } from '@privy-io/react-auth';
 import { baseSepolia } from 'viem/chains';
@@ -6,14 +6,15 @@ import { baseSepolia } from 'viem/chains';
 type BiconomyInterface = {
   smartAccount?: BiconomySmartAccountV2;
   smartAccountAddress?: string;
-  sessionStorageClient?: any;
-  setSessionStorageClient?: Function
+  sessionStorageClient?: unknown;
+  updateSessionStorageClient?: (client: BiconomySmartAccountV2) => void;
 };
 
 const BiconomyContext = React.createContext<BiconomyInterface>({
   smartAccount: undefined,
   smartAccountAddress: undefined,
-  setSessionStorageClient: f => f
+  sessionStorageClient: undefined,
+  updateSessionStorageClient: undefined,
 });
 
 export const useBiconomy = () => {
@@ -23,7 +24,7 @@ export const useBiconomy = () => {
 export function BiconomyProvider({ children }: { children: React.ReactNode }) {
   const [smartAccount, setSmartAccount] = useState<BiconomySmartAccountV2 | undefined>();
   const [smartAccountAddress, setSmartAccountAddress] = useState<string | undefined>();
-  const [sessionStorageClient, setSessionStorageClient] = useState<any>();
+  const [sessionStorageClient, setSessionStorageClient] = useState<unknown>();
   const { wallets } = useWallets();
   const { ready, authenticated } = usePrivy();
 
@@ -31,23 +32,24 @@ export function BiconomyProvider({ children }: { children: React.ReactNode }) {
     await wallet.switchChain(baseSepolia.id);
     const provider = await wallet.getEthersProvider();
     const signer = provider.getSigner();
+
     console.log({
-      bundlerUrl: process.env.NEXT_PUBLIC_BICONOMY_BUNDLER_URL, // <-- Read about this at https://docs.biconomy.io/dashboard#bundler-url
-      biconomyPaymasterApiKey: process.env.NEXT_PUBLIC_BICONOMY_PAYMASTER_API_KEY, // <-- Read about at https://docs.biconomy.io/dashboard/paymaster
-      rpcUrl: process.env.NEXT_PRIVATE_RPC_URL, // <-- read about this at https://docs.biconomy.io/Account/methods#createsmartaccountclient
-    });
-
-    const smartAccount = await createSmartAccountClient({
-      signer: signer as LightSigner,
-      bundlerUrl: process.env.NEXT_PUBLIC_BICONOMY_BUNDLER_URL, // <-- Read about this at https://docs.biconomy.io/dashboard#bundler-url
+      bundlerUrl: process.env.NEXT_PUBLIC_BICONOMY_BUNDLER_URL,
       biconomyPaymasterApiKey: process.env.NEXT_PUBLIC_BICONOMY_PAYMASTER_API_KEY,
-      paymasterUrl: process.env.NEXT_PUBLIC_BICONOMY_PAYMASTER_URL, // <-- Read about at https://docs.biconomy.io/dashboard/paymaster
-      rpcUrl: process.env.NEXT_PRIVATE_RPC_URL, // <-- read about this at https://docs.biconomy.io/Account/methods#createsmartaccountclient
+      rpcUrl: process.env.NEXT_PRIVATE_RPC_URL,
     });
 
-    const address = await smartAccount.getAccountAddress();
+    const userSmartAccount = await createSmartAccountClient({
+      signer: signer as LightSigner,
+      bundlerUrl: process.env.NEXT_PUBLIC_BICONOMY_BUNDLER_URL,
+      biconomyPaymasterApiKey: process.env.NEXT_PUBLIC_BICONOMY_PAYMASTER_API_KEY,
+      paymasterUrl: process.env.NEXT_PUBLIC_BICONOMY_PAYMASTER_URL,
+      rpcUrl: process.env.NEXT_PRIVATE_RPC_URL,
+    });
 
-    setSmartAccount(smartAccount);
+    const address = await userSmartAccount.getAccountAddress();
+
+    setSmartAccount(userSmartAccount);
     setSmartAccountAddress(address);
   };
 
@@ -55,12 +57,24 @@ export function BiconomyProvider({ children }: { children: React.ReactNode }) {
     if (!ready || !authenticated) return;
     const embeddedWallet = wallets.find((wallet) => wallet.walletClientType === 'privy');
     if (embeddedWallet && !smartAccount) createBiconomyAccountFromEOA(embeddedWallet);
-  }, [wallets]);
+  }, [wallets, ready, authenticated, smartAccount]);
+
+  const updateSessionStorageClient = useCallback(
+    (client: BiconomySmartAccountV2) => {
+      setSessionStorageClient(client);
+    },
+    [setSessionStorageClient]
+  );
+
+  const contextValue = useMemo(() => ({
+    smartAccount,
+    smartAccountAddress,
+    sessionStorageClient,
+    updateSessionStorageClient,
+  }), [smartAccount, smartAccountAddress, sessionStorageClient, updateSessionStorageClient]);
 
   return (
-    <BiconomyContext.Provider
-      value={{ smartAccount, smartAccountAddress, sessionStorageClient, setSessionStorageClient }}
-    >
+    <BiconomyContext.Provider value={contextValue}>
       {children}
     </BiconomyContext.Provider>
   );
