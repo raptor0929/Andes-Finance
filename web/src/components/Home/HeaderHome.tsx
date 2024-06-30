@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../Global/LanguageSwitcher';
 import AccountConnect from '../layout/header/AccountConnect';
+import AndesFinanceLogo from '../Global/AndesFinanceLogo';
 
 type ScrollComponentProps = {
   scrollToSection: (index: number) => void;
@@ -17,7 +18,7 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
       <NavbarContent justify="end">
         <NavbarBrand>
           <Link color={activeSection === 0 ? undefined : 'foreground'}>
-            <Image src="/images/logo.svg" alt="Logo" width={300} height={300} />
+            <AndesFinanceLogo />
           </Link>
         </NavbarBrand>
       </NavbarContent>
