@@ -9,6 +9,7 @@ export function AccountInfoPanel() {
   // const { address } = useAccount();
   // const { disconnect } = useDisconnect();
   const { smartAccountAddress: address } = useBiconomy();
+  console.log('address', address);
   const { logout } = usePrivy();
   const handleDisconnectWallet = useCallback(() => {
     logout();
