@@ -47,7 +47,7 @@ const challenges = [
     title: 'OBTÉN TU PRÉSTAMO',
     subtitle: 'Elige cuánto deseas que te prestemos y en cuanto tiempo.',
     status: 'no-done',
-    link: '/dashboard/get-loan',
+    link: '/dashboard/loan',
   },
 ];
 

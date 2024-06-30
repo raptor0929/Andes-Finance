@@ -35,8 +35,8 @@ const page = () => {
         <div className="flex h-full p-14">
           <div className="flex w-full flex-col items-center justify-center bg-white px-20 text-black">
             <div className="w-full">
-              <p className="text-6xl text-information">Desembolsa tu préstamo</p>
-              <span className="text-gray-400">Confirma primero estos datos</span>
+              <p className="text-4xl text-information">Desembolsa tu préstamo</p>
+              <span className="text-sm text-gray-400">Confirma primero estos datos</span>
             </div>
             <div className="flex h-1/2 w-full items-center justify-center text-black">
               <div className="mr-10 flex h-full w-full flex-col justify-center gap-8">
@@ -118,8 +118,8 @@ const page = () => {
 
             <Button
               radius="full"
+              className="px-16 py-8"
               color="primary"
-              className="px-16 py-8 text-lg"
               onPress={handleButtonClick}
             >
               SOLICITAR
