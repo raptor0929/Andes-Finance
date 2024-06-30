@@ -6,10 +6,11 @@ import { baseSepolia } from 'viem/chains';
 import TranslationProvider from '@/components/Global/TranslationProvider';
 import i18n from '../../i18n';
 import { BiconomyProvider } from './BiconomyContext';
+import { GameProvider } from '@/components/Global/GameProvider';
 
 type ProvidersProps = {
   children: ReactNode;
-}
+};
 
 const Providers: FC<ProvidersProps> = ({ children }) => {
   useEffect(() => {
@@ -30,7 +31,9 @@ const Providers: FC<ProvidersProps> = ({ children }) => {
             loginMethods: ['email', 'google', 'twitter', 'discord', 'apple'],
           }}
         >
-          <BiconomyProvider>{children}</BiconomyProvider>
+          <BiconomyProvider>
+            <GameProvider>{children}</GameProvider>
+          </BiconomyProvider>
         </PrivyProvider>
       </TranslationProvider>
     </NextUIProvider>

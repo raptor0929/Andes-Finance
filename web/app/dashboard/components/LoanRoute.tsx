@@ -12,13 +12,15 @@ import {
 import { Badge } from '@nextui-org/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useGame } from '@/components/Global/GameProvider';
+import { useRouter } from 'next/navigation';
 
 const challenges = [
   {
     number: '01',
     title: 'OPEN OR CONNECT YOUR ACCOUNT',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    status: 'done',
+    status: 'no-done',
     link: '/dashboard/challenge/01',
   },
   {
@@ -32,14 +34,14 @@ const challenges = [
     number: '03',
     title: 'AHORRA DURANTE 3 SEMANAS',
     subtitle: 'Y conecta con coinbase',
-    status: 'no-done',
+    status: 'coming',
     link: '/dashboard/challenge/03',
   },
   {
     number: '04',
     title: 'HAZ UNA TRANSFERENCIA SENCILLA',
     subtitle: 'Y conecta con coinbase',
-    status: 'no-done',
+    status: 'coming',
     link: '/dashboard/challenge/04',
   },
   {
@@ -52,6 +54,9 @@ const challenges = [
 ];
 
 function LoanRoute() {
+  const router = useRouter();
+  const { gameState } = useGame();
+  console.log(gameState);
   return (
     <div className="h-full bg-white p-10">
       <h1 className="pb-2 font-urbanist text-3xl text-[#3268FF]">
@@ -76,7 +81,7 @@ function LoanRoute() {
             return (
               <TableRow key={index} className=" text-black">
                 <TableCell>
-                  <div className="relative inline-block w-10 ">
+                  <div className="relative inline-block h-10 w-10">
                     <Badge
                       content={
                         <Image
@@ -116,14 +121,20 @@ function LoanRoute() {
                   <p className="text-xs text-gray-400">{challenge.subtitle}</p>
                 </TableCell>
                 <TableCell className="flex w-full items-center justify-center">
-                  {challenge.status === 'done' ? (
+                  {gameState > index + 1 ? (
                     <span className="text-center text-sm text-success">Sent and approved</span>
+                  ) : gameState === index + 1 ? (
+                    <Button
+                      radius="full"
+                      color="primary"
+                      onClick={() => {
+                        router.push(challenge.link);
+                      }}
+                    >
+                      {gameState === 5 ? 'Pedir prestamo' : 'Empezar'}
+                    </Button>
                   ) : (
-                    <Link href={challenge.link} passHref>
-                      <Button radius="full" color="primary">
-                        EMPEZAR
-                      </Button>
-                    </Link>
+                    <></>
                   )}
                 </TableCell>
               </TableRow>
