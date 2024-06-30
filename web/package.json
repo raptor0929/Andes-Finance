@@ -24,6 +24,7 @@
     "@biconomy/core-types": "^3.1.3",
     "@biconomy/particle-auth": "^4.1.1",
     "@biconomy/paymaster": "^4.1.1",
+    "@biconomy/use-aa": "^1.0.14",
     "@coinbase/onchainkit": "^0.19.7",
     "@coinbase/wallet-sdk": "4.0.0",
     "@farcaster/hub-nodejs": "^0.11.9",

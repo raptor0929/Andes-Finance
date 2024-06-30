@@ -1779,6 +1779,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@biconomy/use-aa@npm:^1.0.14":
+  version: 1.0.14
+  resolution: "@biconomy/use-aa@npm:1.0.14"
+  peerDependencies:
+    "@biconomy/account": ^4.4.5
+    "@tanstack/react-query": ^5.18.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    viem: ^2
+    wagmi: ^2
+  checksum: 10c0/dbb897abd028275e005971eb3e1a3214f271e6fe88dc4a60f1573bd09fce66c9d1ad75078e39410c35b5a6704dc96cfb8e2b099cb495187a57ba09a9aa2f2900
+  languageName: node
+  linkType: hard
+
 "@clack/core@npm:^0.3.3":
   version: 0.3.4
   resolution: "@clack/core@npm:0.3.4"
@@ -9014,6 +9028,7 @@ __metadata:
     "@biconomy/core-types": "npm:^3.1.3"
     "@biconomy/particle-auth": "npm:^4.1.1"
     "@biconomy/paymaster": "npm:^4.1.1"
+    "@biconomy/use-aa": "npm:^1.0.14"
     "@coinbase/onchainkit": "npm:^0.19.7"
     "@coinbase/wallet-sdk": "npm:4.0.0"
     "@farcaster/hub-nodejs": "npm:^0.11.9"

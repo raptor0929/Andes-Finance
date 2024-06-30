@@ -16,10 +16,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import SharedLayout from '@/components/SharedLayout';
+import RequestLoanButton from './RequestLoanButton';
+import { useBiconomy } from '@/context/BiconomyContext';
 
 const page = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
+  const { smartAccountAddress } = useBiconomy();
 
   const handleButtonClick = () => {
     onOpen();
@@ -116,14 +119,15 @@ const page = () => {
               </div>
             </div>
 
-            <Button
+            {/* <Button
               radius="full"
               className="px-16 py-8"
               color="primary"
               onPress={handleButtonClick}
             >
               SOLICITAR
-            </Button>
+            </Button> */}
+            <RequestLoanButton smartAccountAddress={smartAccountAddress} />
             <Modal
               isOpen={isOpen}
               onClose={handleClose}
