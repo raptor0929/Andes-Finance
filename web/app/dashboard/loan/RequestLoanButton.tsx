@@ -3,13 +3,8 @@ import { useEffect } from 'react';
 import {
   PaymasterMode,
   createSessionSmartAccountClient,
-  createSession,
-  Rule,
-  Policy,
-  Session,
   getSingleSessionTxParams,
 } from '@biconomy/account';
-import { useSession, useUserOpWait, Options } from '@biconomy/use-aa';
 import { Button } from '@nextui-org/react';
 import { encodeFunctionData, parseAbi } from 'viem';
 
@@ -21,20 +16,24 @@ const withSponsorship = {
   paymasterServiceData: { mode: PaymasterMode.SPONSORED },
 };
 
-function RequestLoanButton({ amount, duration }) {
-  // const { mutate, data: userOpResponse, error, isPending } = useSession();
+type RequestLoanButtonProps = {
+  amount: number;
+  duration: number;
+};
+
+function RequestLoanButton({ amount, duration }: RequestLoanButtonProps) {
   const { sessionStorageClient } = useBiconomy();
 
   const handleRequestLoan = async () => {
     const usersSmartAccountAddress = sessionStorageClient.smartAccountAddress;
     const emulatedUsersSmartAccount = await createSessionSmartAccountClient(
       {
-        accountAddress: usersSmartAccountAddress, // Dapp can set the account address on behalf of the user
+        accountAddress: usersSmartAccountAddress,
         bundlerUrl: process.env.NEXT_PUBLIC_BICONOMY_BUNDLER_URL,
         paymasterUrl: process.env.NEXT_PUBLIC_BICONOMY_PAYMASTER_URL,
         chainId: baseSepolia.id,
       },
-      usersSmartAccountAddress, // Storage client, full Session or simply the smartAccount address if using default storage for your environment
+      usersSmartAccountAddress,
     );
 
     const takeLoanTx = {
@@ -49,7 +48,7 @@ function RequestLoanButton({ amount, duration }) {
     const params = await getSingleSessionTxParams(
       usersSmartAccountAddress,
       baseSepolia,
-      0, // index of the relevant policy leaf to the tx
+      0,
     );
 
     const { wait } = await emulatedUsersSmartAccount.sendTransaction(takeLoanTx, {
