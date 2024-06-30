@@ -18,11 +18,14 @@ import { useRouter } from 'next/navigation';
 import SharedLayout from '@/components/SharedLayout';
 import { useBiconomy } from '@/context/BiconomyContext';
 import RequestLoanButton from './RequestLoanButton';
+import { A } from '@/components/layout/guide';
 
 const page = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
   const { smartAccountAddress } = useBiconomy();
+  const [amount, setAmount] = useState("");
+  const [duration, setDuration] = useState(0);
 
   const handleButtonClick = () => {
     onOpen();
@@ -32,6 +35,15 @@ const page = () => {
     onClose();
     router.push('/loans');
   };
+  const handleDurationChange = (value: number | number[]) => {
+    if (typeof value == 'number') setDuration(value);
+    else setDuration(value[0]);
+  };
+
+  const handleAmountChange = (event) => {
+    setAmount(event.target.value);
+  };
+
   return (
     <SharedLayout>
       <div className="h-full px-4 py-2">
@@ -54,6 +66,8 @@ const page = () => {
                     min={10}
                     placeholder="0.0"
                     labelPlacement="outside"
+                    value={amount}
+                    onChange={handleAmountChange}
                     startContent={
                       <div className="pointer-events-none flex items-center">
                         <span className="text-2xl font-bold text-primary">$</span>
@@ -73,10 +87,12 @@ const page = () => {
                 <div className="mt-4 flex flex-col gap-2">
                   <span>¿EN CUANTOS MESES QUIERES PAGAR?</span>
                   <Slider
+                    value={duration}
                     step={0.25}
                     formatOptions={{ style: 'percent' }}
                     maxValue={1}
                     minValue={0}
+                    onChange={handleDurationChange}
                     marks={[
                       {
                         value: 0,
@@ -127,7 +143,7 @@ const page = () => {
             >
               SOLICITAR
             </Button> */}
-            <RequestLoanButton smartAccountAddress={smartAccountAddress} />
+            <RequestLoanButton amount={10} duration={3} />
             <Modal
               isOpen={isOpen}
               onClose={handleClose}
