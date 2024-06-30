@@ -7,15 +7,12 @@ const LanguageSwitcher: React.FC = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
 
   useEffect(() => {
-    const storedLanguage = localStorage.getItem('i18nextLng') || 'en';
-    setSelectedLanguage(storedLanguage);
-    // i18n.changeLanguage(storedLanguage);
+    setSelectedLanguage(i18n.language || 'en');
   }, []);
 
   const changeLanguage = (lng: React.Key) => {
     setSelectedLanguage(lng.toString());
     i18n.changeLanguage(lng.toString());
-    localStorage.setItem('i18nextLng', lng.toString());
   };
 
   return (
