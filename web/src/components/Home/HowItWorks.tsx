@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 const HowItWorks: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="bg-success py-28 text-white">
+    <section className="bg-success px-10 py-28 text-white">
       <div className="container mx-auto">
         <h2 className="mb-20 text-6xl font-medium">{t('howItWorks.mainTitle')}</h2>
         <div className="flex flex-wrap justify-around">

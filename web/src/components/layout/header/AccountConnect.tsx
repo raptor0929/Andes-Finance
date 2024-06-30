@@ -1,5 +1,5 @@
-"use client"
-import { Link, Button } from '@nextui-org/react';
+'use client';
+import { Button } from '@nextui-org/react';
 import { usePrivy } from '@privy-io/react-auth';
 import { useTranslation } from 'react-i18next';
 import { baseSepolia } from 'viem/chains';
@@ -38,13 +38,11 @@ function AccountConnect() {
         if (!authenticated) {
           return (
             <Button
-              as={Link}
               color="primary"
-              href="#"
               size="lg"
               radius="full"
               variant="bordered"
-              className="text-black "
+              className="font-urbanist text-black"
               onClick={handleStart}
             >
               {t('navbar.logIn')}
@@ -65,7 +63,7 @@ function AccountConnect() {
             <div className="flex flex-grow flex-col md:hidden">
               <AccountInfoPanel />
             </div>
-            <div className="flex hidden md:block">
+            <div className="flex md:block">
               <AccountDropdown />
             </div>
           </>

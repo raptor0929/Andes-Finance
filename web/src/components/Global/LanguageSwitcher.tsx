@@ -18,10 +18,16 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <Dropdown backdrop="blur">
       <DropdownTrigger>
-        <Button variant="flat" startContent={<IoLanguageSharp />} radius="full" size="lg">
-          {selectedLanguage === 'en' && 'English'}
-          {selectedLanguage === 'en-USA' && 'English'}
-          {selectedLanguage === 'es' && 'Español'}
+        <Button
+          variant="flat"
+          startContent={<IoLanguageSharp />}
+          radius="full"
+          size="lg"
+          className="font-urbanist"
+        >
+          {selectedLanguage === 'en' && 'En'}
+          {selectedLanguage === 'en-USA' && 'En'}
+          {selectedLanguage === 'es' && 'Es'}
         </Button>
       </DropdownTrigger>
       <DropdownMenu

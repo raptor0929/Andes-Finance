@@ -1,26 +1,31 @@
-import { Avatar } from '@coinbase/onchainkit/identity';
+import { Name } from '@coinbase/onchainkit/identity';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { clsx } from 'clsx';
-// import { useAccount } from 'wagmi';
+import { Snippet } from '@nextui-org/snippet';
 import { useBiconomy } from '@/context/BiconomyContext';
 import { AccountInfoPanel } from './AccountInfoPanel';
-
-const DropdownMenuContentStyle = {
-  marginTop: '-22px',
-};
+import { Avatar } from '@nextui-org/react';
 
 export function AccountDropdown() {
-  // const { address } = useAccount();
   const { smartAccountAddress: address } = useBiconomy();
-
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <div className="flex h-8 w-8 items-center justify-center">
+        <div className=" p-2">
           {address && (
-            <button type="button" aria-label="Disconnect">
-              <Avatar address={address} />
-            </button>
+            <div className="flex items-center gap-2">
+              <Avatar
+                src="https://yt3.googleusercontent.com/9OW-1uDGtjji2NY0Axp_9xV_IxbbDsT08aYtRE-d_GEn_aHwqPfN6NoW1sIyyYH6yfC3UgkK=s176-c-k-c0x00ffffff-no-rj"
+                className="h-8 w-8 text-tiny"
+              />
+              <Snippet
+                disableTooltip
+                hideSymbol
+                codeString={`0x${address.slice(2)}`}
+                className="-p-2 bg-transparent"
+              >
+                <Name address={`0x${address.slice(2)}`} className="text-black" />
+              </Snippet>
+            </div>
           )}
         </div>
       </DropdownMenu.Trigger>
@@ -28,11 +33,9 @@ export function AccountDropdown() {
         <DropdownMenu.Content
           align="end"
           sideOffset={40}
-          className={clsx(
-            'h-42 inline-flex w-60 flex-col items-start justify-start',
-            'rounded-lg bg-neutral-900 bg-opacity-90 px-6 pb-2 pt-6 shadow backdrop-blur-2xl',
-          )}
-          style={DropdownMenuContentStyle}
+          className={
+            'z-20 -mt-10 rounded-lg bg-neutral-900 bg-opacity-90 px-6 pb-2 pt-6 shadow backdrop-blur-2xl'
+          }
         >
           <AccountInfoPanel />
         </DropdownMenu.Content>

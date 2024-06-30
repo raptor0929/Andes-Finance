@@ -22,7 +22,7 @@ function FreeCourses() {
   ];
 
   return (
-    <div className="flex bg-[#EEF2FF] px-28 py-24 text-black">
+    <div className="flex bg-[#EEF2FF] px-10 py-24 text-black">
       <div className="text-bold flex w-1/2 flex-col gap-10  px-4 py-10">
         <span className="font-urbanist text-xl">{t('freeCourses.shortDescription')}</span>
         <h1 className="w-full font-urbanist text-6xl">{t('freeCourses.title')}</h1>
@@ -34,7 +34,7 @@ function FreeCourses() {
       <div className="flex w-1/2 space-x-8 overflow-x-auto px-4 py-8">
         {cards.map((card, index) => (
           <Card key={index} className="w-2/3 flex-shrink-0 gap-4 px-10 py-10">
-            <CardHeader className="flex flex-col items-start gap-2">
+            <CardHeader className="z-0 flex flex-col items-start gap-2">
               <Image
                 src="/images/home/briefcase-alt.svg"
                 width={50}

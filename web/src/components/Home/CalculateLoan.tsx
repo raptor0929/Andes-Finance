@@ -9,7 +9,7 @@ const CalculateLoan: React.FC = () => {
 
   return (
     <section className="flex items-center justify-center bg-primary py-24 text-black">
-      <div className="ml-40 flex h-1/2 w-2/3 flex-col gap-4 bg-white px-20 py-14 pr-64">
+      <div className="ml-40 flex h-1/2 w-full flex-col gap-4 bg-white px-20 py-14 pr-64">
         <div className="flex flex-col gap-2">
           <p>{t('calculateLoan.letStart')}</p>
           <h2 className="mb-4 font-urbanist text-7xl">{t('calculateLoan.title')}</h2>

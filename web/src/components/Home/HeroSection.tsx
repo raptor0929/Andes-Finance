@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
     router.push('/dashboard');
   };
   return (
-    <section className=" bg-information text-white">
+    <section className=" bg-information px-10 text-white">
       <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left">
         <div className="mb-44 md:w-1/2">
           <p className="mb-6 text-lg">{t('hereSection.shortDescription')}</p>
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="mx-auto"
-           />
+          />
         </div>
         <div className="flex w-full flex-col items-center justify-center bg-white p-8 shadow-lg md:w-1/2">
           <p className="mb-4 text-4xl text-black">{t('hereSection.videoDescription')}</p>

@@ -12,7 +12,7 @@ const GetStarted: React.FC = () => {
 
   const { t } = useTranslation();
   return (
-    <section className="container mx-auto pt-28">
+    <section className="container mx-auto px-10 pt-28">
       <div className="flex flex-wrap items-center justify-center">
         <div className="w-full  md:w-1/2">
           <h2 className="mb-20 text-6xl font-medium text-black">{t('getStarted.title')}</h2>
@@ -30,7 +30,7 @@ const GetStarted: React.FC = () => {
                 alt="Hero Image"
                 width={300}
                 height={300}
-                className="relative -bottom-10 left-10 z-10 -ml-10"
+                className="relative -bottom-10 left-10 z-0 -ml-10"
               />
             </div>
           </div>
