@@ -1,9 +1,9 @@
 'use client';
-import SharedLayout from '@/components/SharedLayout';
-import { usePathname } from 'next/navigation';
 import React from 'react';
 import { Input, Button } from '@nextui-org/react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import SharedLayout from '@/components/SharedLayout';
 
 const page = () => {
   const pathname = usePathname();
@@ -50,7 +50,7 @@ const page = () => {
               </div>
             </div>
 
-            <Link href={'/dashboard/loan'} passHref>
+            <Link href="/dashboard/loan" passHref>
               <Button radius="full" color="primary" className="px-16 py-8 text-lg">
                 CONTINUAR
               </Button>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Score from './Score';
 
-const CreditScore = () => {
+function CreditScore() {
   return (
     <div className="flex h-1/2 flex-col items-center justify-center gap-4 bg-white px-10">
       <div className="w-full ">
@@ -17,6 +17,6 @@ const CreditScore = () => {
       </span>
     </div>
   );
-};
+}
 
 export default CreditScore;

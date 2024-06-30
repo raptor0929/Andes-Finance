@@ -1,12 +1,6 @@
 'use client';
 
-import SharedLayout from '@/components/SharedLayout';
 import React, { useEffect, useState } from 'react';
-import { Input, Button } from '@nextui-org/react';
-import Link from 'next/link';
-import { Slider } from '@nextui-org/react';
-import { useRouter } from 'next/navigation';
-import { Divider } from '@nextui-org/react';
 import {
   Modal,
   ModalContent,
@@ -15,7 +9,13 @@ import {
   ModalFooter,
   useDisclosure,
 } from '@nextui-org/modal';
+import { Input, Button } from '@nextui-org/react';
+import { Slider } from '@nextui-org/react';
+import { Divider } from '@nextui-org/react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import SharedLayout from '@/components/SharedLayout';
 
 const page = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -134,7 +134,7 @@ const page = () => {
                 {(onClose) => (
                   <>
                     <ModalHeader className="flex flex-col items-center gap-5 py-12">
-                      <Image src={'/images/check.svg'} width={50} height={50} alt="check" />
+                      <Image src="/images/check.svg" width={50} height={50} alt="check" />
                       <span className="text-center text-3xl text-[#1744F9]">
                         ¡Ya desembolsamos tu préstamo!
                       </span>

@@ -1,6 +1,9 @@
-import { ConnectAccount } from '@coinbase/onchainkit/wallet';
+"use client"
+import { Link, Button } from '@nextui-org/react';
+import { usePrivy } from '@privy-io/react-auth';
+import { useTranslation } from 'react-i18next';
 import { baseSepolia } from 'viem/chains';
-import { useAccount, useChainId, useConnect, useDisconnect } from 'wagmi';
+import { useChainId } from 'wagmi';
 import { AccountDropdown } from './AccountDropdown';
 import { AccountInfoPanel } from './AccountInfoPanel';
 
@@ -11,31 +14,47 @@ import { AccountInfoPanel } from './AccountInfoPanel';
  *  - Displays the wallet network
  */
 function AccountConnect() {
-  const account = useAccount();
-  const { status } = useConnect();
-  const { disconnect } = useDisconnect();
   const chainId = useChainId();
+  const { t } = useTranslation();
+  const { ready, authenticated, login, logout } = usePrivy();
+  const handleStart = () => {
+    if (!authenticated) login();
+  };
 
   return (
     <div
       className="flex flex-grow"
-      {...(status === 'pending' && {
-        'aria-hidden': true,
-        style: {
-          opacity: 0,
-          pointerEvents: 'none',
-          userSelect: 'none',
-        },
-      })}
+      {...(!ready &&
+        authenticated && {
+          'aria-hidden': true,
+          style: {
+            opacity: 0,
+            pointerEvents: 'none',
+            userSelect: 'none',
+          },
+        })}
     >
       {(() => {
-        if (account.status === 'disconnected') {
-          return <ConnectAccount />;
+        if (!authenticated) {
+          return (
+            <Button
+              as={Link}
+              color="primary"
+              href="#"
+              size="lg"
+              radius="full"
+              variant="bordered"
+              className="text-black "
+              onClick={handleStart}
+            >
+              {t('navbar.logIn')}
+            </Button>
+          );
         }
 
-        if (account.status === 'connected' && chainId !== baseSepolia.id) {
+        if (ready && authenticated && chainId !== baseSepolia.id) {
           return (
-            <button onClick={() => disconnect()} type="button">
+            <button onClick={logout} type="button">
               Wrong network
             </button>
           );

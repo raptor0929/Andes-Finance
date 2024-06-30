@@ -1,13 +1,13 @@
 'use client';
 import React, { useRef, RefObject, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import CalculateLoan from './CalculateLoan';
+import FooterHome from './FooterHome';
+import FreeCourses from './FreeCourses';
+import GetStarted from './GetStarted';
 import HeaderHome from './HeaderHome';
 import HeroSection from './HeroSection';
 import HowItWorks from './HowItWorks';
-import GetStarted from './GetStarted';
-import CalculateLoan from './CalculateLoan';
-import FreeCourses from './FreeCourses';
-import FooterHome from './FooterHome';
-import { useTranslation } from 'react-i18next';
 import InvestorInterest from './InvestorInterest';
 
 const Home: React.FC = () => {

@@ -1,7 +1,8 @@
 import { Avatar } from '@coinbase/onchainkit/identity';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { clsx } from 'clsx';
-import { useAccount } from 'wagmi';
+// import { useAccount } from 'wagmi';
+import { useBiconomy } from '@/context/BiconomyContext';
 import { AccountInfoPanel } from './AccountInfoPanel';
 
 const DropdownMenuContentStyle = {
@@ -9,7 +10,8 @@ const DropdownMenuContentStyle = {
 };
 
 export function AccountDropdown() {
-  const { address } = useAccount();
+  // const { address } = useAccount();
+  const { smartAccountAddress: address } = useBiconomy();
 
   return (
     <DropdownMenu.Root>

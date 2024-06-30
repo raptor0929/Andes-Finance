@@ -1,10 +1,13 @@
 'use client';
-import i18n from '../../i18n';
 import { FC, ReactNode, useEffect } from 'react';
 import { NextUIProvider } from '@nextui-org/react';
+import { PrivyProvider } from '@privy-io/react-auth';
+import { baseSepolia } from 'viem/chains';
 import TranslationProvider from '@/components/Global/TranslationProvider';
+import i18n from '../../i18n';
+import { BiconomyProvider } from './BiconomyContext';
 
-interface ProvidersProps {
+type ProvidersProps = {
   children: ReactNode;
 }
 
@@ -15,7 +18,21 @@ const Providers: FC<ProvidersProps> = ({ children }) => {
 
   return (
     <NextUIProvider>
-      <TranslationProvider>{children}</TranslationProvider>
+      <TranslationProvider>
+        <PrivyProvider
+          appId={process.env.NEXT_PUBLIC_PRIVY_ID || ''}
+          config={{
+            supportedChains: [baseSepolia],
+            embeddedWallets: {
+              createOnLogin: 'users-without-wallets',
+              noPromptOnSignature: true,
+            },
+            loginMethods: ['email', 'google', 'twitter', 'discord', 'apple'],
+          }}
+        >
+          <BiconomyProvider>{children}</BiconomyProvider>
+        </PrivyProvider>
+      </TranslationProvider>
     </NextUIProvider>
   );
 };

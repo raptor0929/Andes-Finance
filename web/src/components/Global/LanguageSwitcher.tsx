@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import i18n from '../../../i18n';
-import { IoLanguageSharp } from 'react-icons/io5';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from '@nextui-org/react';
+import { IoLanguageSharp } from 'react-icons/io5';
+import i18n from '../../../i18n';
 
 const LanguageSwitcher: React.FC = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en');

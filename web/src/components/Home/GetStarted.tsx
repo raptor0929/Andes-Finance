@@ -22,7 +22,7 @@ const GetStarted: React.FC = () => {
               <span className="w-3/4 pl-4 text-2xl text-black">
                 {t('getStarted.imageDescription')}
               </span>
-              <span className="w-3/4 pl-4  text-2xl font-bold text-black"></span>
+              <span className="w-3/4 pl-4  text-2xl font-bold text-black" />
             </div>
             <div className="z-20">
               <Image

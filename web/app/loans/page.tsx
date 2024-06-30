@@ -1,9 +1,9 @@
 'use client';
-import SharedLayout from '@/components/SharedLayout';
 import React from 'react';
-import LoansTable from './components/LoansTable';
-import Header from './components/Header';
 import { Button } from '@nextui-org/react';
+import SharedLayout from '@/components/SharedLayout';
+import Header from './components/Header';
+import LoansTable from './components/LoansTable';
 
 const loansData = [
   {

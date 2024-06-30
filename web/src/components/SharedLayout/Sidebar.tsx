@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const links = [
@@ -56,7 +56,7 @@ const Sidebar: React.FC = () => {
       <div className="mt-auto">
         <div className="mt-4">
           <Link
-            href={'/help'}
+            href="/help"
             className={`my-1 mr-8 flex flex-row items-center rounded-r-full p-4 no-underline transition duration-200 hover:bg-[#98B3FF] hover:bg-opacity-30 hover:text-white ${
               selected === '/help' ? 'bg-[#98B3FF] bg-opacity-30 text-white' : 'text-white'
             }`}
@@ -65,7 +65,7 @@ const Sidebar: React.FC = () => {
             <span className="px-4">Help</span>
           </Link>
           <Link
-            href={'/settings'}
+            href="/settings"
             className={`my-1 mr-8 flex flex-row items-center rounded-r-full p-4 no-underline transition duration-200 hover:bg-[#98B3FF] hover:bg-opacity-30 hover:text-white ${
               selected === '/settings' ? 'bg-[#98B3FF] bg-opacity-30 text-white' : 'text-white'
             }`}

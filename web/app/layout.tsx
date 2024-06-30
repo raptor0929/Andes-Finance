@@ -1,10 +1,10 @@
 import './global.css';
 import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
+import Providers from '@/context/Providers';
 import OnchainProviders from '@/OnchainProviders';
 import { initAnalytics } from '@/utils/analytics';
 import { inter } from './fonts';
 import type { Metadata } from 'next';
-import Providers from '@/context/Providers';
 
 export const viewport = {
   width: 'device-width',

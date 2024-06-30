@@ -1,8 +1,8 @@
-import SharedLayout from '@/components/SharedLayout';
 import React from 'react';
+import SharedLayout from '@/components/SharedLayout';
+import CreditScore from './components/CreditScore';
 import Founding from './components/Founding';
 import LoanRoute from './components/LoanRoute';
-import CreditScore from './components/CreditScore';
 
 const page = () => {
   return (

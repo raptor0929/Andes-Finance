@@ -2,19 +2,31 @@
 
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import { Button } from '@nextui-org/react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation();
+  const router = useRouter();
+
+  const handleStart = () => {
+    router.push('/dashboard');
+  };
   return (
     <section className=" bg-information text-white">
       <div className="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left">
         <div className="mb-44 md:w-1/2">
           <p className="mb-6 text-lg">{t('hereSection.shortDescription')}</p>
           <h1 className="mb-6 text-6xl font-medium">{t('hereSection.title')}</h1>
-          <Button color="primary" className="text-black" radius="full" size="lg">
+          <Button
+            onClick={handleStart}
+            color="primary"
+            className="text-black"
+            radius="full"
+            size="lg"
+          >
             {t('hereSection.start')}
           </Button>
         </div>
@@ -38,7 +50,7 @@ const HeroSection: React.FC = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="mx-auto"
-          ></iframe>
+           />
         </div>
         <div className="flex w-full flex-col items-center justify-center bg-white p-8 shadow-lg md:w-1/2">
           <p className="mb-4 text-4xl text-black">{t('hereSection.videoDescription')}</p>

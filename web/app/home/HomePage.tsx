@@ -1,9 +1,9 @@
 'use client';
 import { useAccount } from 'wagmi';
+import Home from '@/components/Home';
+import HeaderHome from '@/components/Home/HeaderHome';
 import Footer from '@/components/layout/footer/Footer';
 import Header from '@/components/layout/header/Header';
-import HeaderHome from '@/components/Home/HeaderHome';
-import Home from '@/components/Home';
 
 /**
  * Use the page component to wrap the components

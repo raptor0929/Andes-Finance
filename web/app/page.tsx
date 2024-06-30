@@ -1,6 +1,6 @@
+import TranslationProvider from '@/components/Global/TranslationProvider';
 import { generateMetadata } from '@/utils/generateMetadata';
 import HomePage from './home/HomePage';
-import TranslationProvider from '@/components/Global/TranslationProvider';
 
 export const metadata = generateMetadata({
   title: 'Build Onchain Apps Template',

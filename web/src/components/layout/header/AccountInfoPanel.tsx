@@ -1,14 +1,18 @@
 import { useCallback } from 'react';
 import { Avatar, Name } from '@coinbase/onchainkit/identity';
+import { usePrivy } from '@privy-io/react-auth';
 import { ExitIcon } from '@radix-ui/react-icons';
-import { useAccount, useDisconnect } from 'wagmi';
+import { useBiconomy } from '@/context/BiconomyContext';
+// import { useAccount, useDisconnect } from 'wagmi';
 
 export function AccountInfoPanel() {
-  const { address } = useAccount();
-  const { disconnect } = useDisconnect();
+  // const { address } = useAccount();
+  // const { disconnect } = useDisconnect();
+  const { smartAccountAddress: address } = useBiconomy();
+  const { logout } = usePrivy();
   const handleDisconnectWallet = useCallback(() => {
-    disconnect();
-  }, [disconnect]);
+    logout();
+  }, [logout]);
 
   if (!address) return null;
 

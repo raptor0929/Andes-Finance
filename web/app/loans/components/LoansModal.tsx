@@ -10,10 +10,9 @@ import {
 } from '@nextui-org/react';
 import Image from 'next/image';
 
-const LoansModal = ({ isOpen, onOpenChange }: any) => {
+function LoansModal({ isOpen, onOpenChange }: unknown) {
   return (
-    <>
-      <Modal
+    <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         className="text-black"
@@ -23,7 +22,7 @@ const LoansModal = ({ isOpen, onOpenChange }: any) => {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col items-center gap-5 py-12">
-                <Image src={'/images/check.svg'} width={50} height={50} alt="check" />
+                <Image src="/images/check.svg" width={50} height={50} alt="check" />
                 <span className="text-3xl text-[#1744F9]">Pago realizado</span>
               </ModalHeader>
               <ModalBody className="px-20 ">
@@ -45,8 +44,7 @@ const LoansModal = ({ isOpen, onOpenChange }: any) => {
           )}
         </ModalContent>
       </Modal>
-    </>
   );
-};
+}
 
 export default LoansModal;

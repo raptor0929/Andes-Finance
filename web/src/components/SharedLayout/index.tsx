@@ -1,13 +1,21 @@
 // /app/common/SharedLayout.tsx
-import React, { ReactNode } from 'react';
-import Sidebar from './Sidebar';
+"use client";
+import React, { ReactNode, useEffect } from 'react';
+import { usePrivy } from '@privy-io/react-auth';
+import { useRouter } from 'next/navigation';
 import Navbar from './Navbar';
+import Sidebar from './Sidebar';
 
-interface SharedLayoutProps {
+type SharedLayoutProps = {
   children: ReactNode;
 }
 
 const SharedLayout: React.FC<SharedLayoutProps> = ({ children }) => {
+  const { ready, authenticated } = usePrivy();
+  const router = useRouter();
+  useEffect(() => {
+    if (!ready || !authenticated) router.push('/');
+  }, [ready, authenticated]);
   return (
     // TODO: change this layout for grid
     <div className="h-screen">

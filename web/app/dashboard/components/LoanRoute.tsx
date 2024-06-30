@@ -9,8 +9,8 @@ import {
   TableCell,
   Button,
 } from '@nextui-org/react';
-import Image from 'next/image';
 import { Badge } from '@nextui-org/react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const challenges = [
@@ -51,7 +51,7 @@ const challenges = [
   },
 ];
 
-const LoanRoute = () => {
+function LoanRoute() {
   return (
     <div className="h-full bg-white p-10">
       <h1 className="font-urbanist text-3xl text-[#3268FF]">
@@ -133,6 +133,6 @@ const LoanRoute = () => {
       </Table>
     </div>
   );
-};
+}
 
 export default LoanRoute;

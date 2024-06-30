@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-const Header = () => {
+function Header() {
   return (
     <div className="flex justify-between bg-[#E2EDF6] px-10 py-5">
       <div className="flex w-1/2 flex-col">
@@ -28,6 +28,6 @@ const Header = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Header;

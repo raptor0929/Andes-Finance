@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, Button } from '@nextui-org/react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
-const FreeCourses = () => {
+function FreeCourses() {
   const { t } = useTranslation();
 
   const cards = [
@@ -36,7 +36,7 @@ const FreeCourses = () => {
           <Card key={index} className="w-2/3 flex-shrink-0 gap-4 px-10 py-10">
             <CardHeader className="flex flex-col items-start gap-2">
               <Image
-                src={'/images/home/briefcase-alt.svg'}
+                src="/images/home/briefcase-alt.svg"
                 width={50}
                 height={50}
                 alt="icon"
@@ -55,6 +55,6 @@ const FreeCourses = () => {
       </div>
     </div>
   );
-};
+}
 
 export default FreeCourses;

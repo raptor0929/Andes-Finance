@@ -1,7 +1,7 @@
-import SharedLayout from '@/components/SharedLayout';
 import React from 'react';
 import { Card, CardHeader, CardBody, Button } from '@nextui-org/react';
 import Image from 'next/image';
+import SharedLayout from '@/components/SharedLayout';
 
 const cards = [
   {
@@ -32,7 +32,7 @@ const page = () => {
             <Card key={index} className="h-full w-1/3 flex-shrink-0 gap-4 px-10 py-14">
               <CardHeader className="flex flex-col items-start gap-2">
                 <Image
-                  src={'/images/home/briefcase-alt.svg'}
+                  src="/images/home/briefcase-alt.svg"
                   width={50}
                   height={50}
                   alt="icon"

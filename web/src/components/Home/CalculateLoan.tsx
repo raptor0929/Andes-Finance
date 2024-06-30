@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Button, Input } from '@nextui-org/react';
 import { Slider } from '@nextui-org/react';
+import { useTranslation } from 'react-i18next';
 
 const CalculateLoan: React.FC = () => {
   const { t } = useTranslation('home');

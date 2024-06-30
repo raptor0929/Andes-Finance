@@ -12,7 +12,7 @@ import {
 } from '@nextui-org/react';
 import { Chip } from '@nextui-org/react';
 import LoansModal from './LoansModal';
-interface ILoansTable {
+type ILoansTable = {
   payment: string;
   mount: string;
   date: string;
@@ -39,7 +39,7 @@ const data = [
   // },
 ];
 
-const LoansTable = ({ data }: { data: ILoansTable[] }) => {
+function LoansTable({ data }: { data: ILoansTable[] }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
     <div className="bg-white px-10 py-4">
@@ -72,7 +72,7 @@ const LoansTable = ({ data }: { data: ILoansTable[] }) => {
                 <TableCell className="text-center text-base">{item.date}</TableCell>
                 <TableCell className="text-center text-base">
                   {item.status === 'pay' && (
-                    <Button radius="full" color={'primary'} className="text-black" onPress={onOpen}>
+                    <Button radius="full" color="primary" className="text-black" onPress={onOpen}>
                       Pay
                     </Button>
                   )}
@@ -103,6 +103,6 @@ const LoansTable = ({ data }: { data: ILoansTable[] }) => {
       <LoansModal isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
   );
-};
+}
 
 export default LoansTable;

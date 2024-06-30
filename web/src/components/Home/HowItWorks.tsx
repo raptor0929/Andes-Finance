@@ -1,8 +1,8 @@
 // src/components/Home/HowItWorks.tsx
 
 'use client';
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 const HowItWorks: React.FC = () => {

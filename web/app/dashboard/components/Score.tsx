@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-interface IScore {
+type IScore = {
   title: string;
   value: number;
 }
 
-const Score = ({ title, value }: IScore) => {
+function Score({ title, value }: IScore) {
   const angleDegrees = value * 1.8 - 180; // map data 0-100 a -90 to 90 degrees
   const angleRadians = angleDegrees * (Math.PI / 180); // degrees to radians
 
@@ -20,9 +20,9 @@ const Score = ({ title, value }: IScore) => {
         style={{
           transform: `translateX(${xPosition}rem) translateY(${yPosition}rem)`,
         }}
-      ></div>
+       />
       <Image
-        src={'/images/score.svg'}
+        src="/images/score.svg"
         alt="quests"
         className="h-full w-full"
         width={10}
@@ -34,6 +34,6 @@ const Score = ({ title, value }: IScore) => {
       </div>
     </div>
   );
-};
+}
 
 export default Score;

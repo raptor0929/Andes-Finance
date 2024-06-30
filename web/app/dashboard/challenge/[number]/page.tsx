@@ -1,8 +1,8 @@
 'use client';
 
-import SharedLayout from '@/components/SharedLayout';
-import { usePathname } from 'next/navigation';
 import React from 'react';
+import { usePathname } from 'next/navigation';
+import SharedLayout from '@/components/SharedLayout';
 
 const page = () => {
   const pathname = usePathname();

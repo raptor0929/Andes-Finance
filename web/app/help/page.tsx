@@ -1,5 +1,5 @@
-import SharedLayout from '@/components/SharedLayout';
 import React from 'react';
+import SharedLayout from '@/components/SharedLayout';
 
 const page = () => {
   return (
