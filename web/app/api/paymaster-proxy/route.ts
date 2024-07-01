@@ -19,6 +19,7 @@ type PaymasterRequest = {
  * @returns {Promise<Response>} - The response object containing the result or an error message.
  */
 export async function POST(req: NextRequest): Promise<NextResponse> {
+  console.log('POST /api/paymaster-proxy');
   const reqBody: PaymasterRequest = (await req.json()) as PaymasterRequest;
   const { method, params } = reqBody;
   const [userOp, entrypoint] = params;

@@ -5,6 +5,7 @@ import AndesFinanceLogo from '../Global/AndesFinanceLogo';
 import LanguageSwitcher from '../Global/LanguageSwitcher';
 import AccountConnect from '../layout/header/AccountConnect';
 import { BlackCreateWalletButton } from '../layout/header/BlackCreateWalletButton';
+import { useAccount } from 'wagmi';
 
 type ScrollComponentProps = {
   scrollToSection: (index: number) => void;
@@ -13,6 +14,7 @@ type ScrollComponentProps = {
 
 const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSection }) => {
   const { t } = useTranslation();
+  const { address } = useAccount();
   return (
     <Navbar className="z-10 bg-background-1 p-4" maxWidth="2xl">
       <NavbarContent className="w-full justify-between">
@@ -51,9 +53,11 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
           <NavbarItem>
             <LanguageSwitcher />
           </NavbarItem>
-          <NavbarItem className="hidden lg:flex">
-            <BlackCreateWalletButton />
-          </NavbarItem>
+          {!address && (
+            <NavbarItem className="hidden lg:flex">
+              <BlackCreateWalletButton />
+            </NavbarItem>
+          )}
           <NavbarItem className="hidden lg:flex">
             <AccountConnect />
           </NavbarItem>

@@ -19,6 +19,9 @@ import SharedLayout from '@/components/SharedLayout';
 import RequestLoanButton from './RequestLoanButton';
 import { A } from '@/components/layout/guide';
 
+const MAX_DURATION = 12;
+const AMOUNT_MULTIPLIER = 10000;
+
 const page = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
@@ -34,11 +37,13 @@ const page = () => {
     router.push('/loans');
   };
   const handleDurationChange = (value: number | number[]) => {
+    console.log('duration value:', value);
     if (typeof value == 'number') setDuration(value);
     else setDuration(value[0]);
   };
 
   const handleAmountChange = (event) => {
+    console.log('amount value:', event.target.value);
     setAmount(event.target.value);
   };
 
@@ -141,7 +146,7 @@ const page = () => {
             >
               SOLICITAR
             </Button> */}
-            <RequestLoanButton amount={10} duration={3} />
+            <RequestLoanButton amount={amount * AMOUNT_MULTIPLIER} duration={duration * MAX_DURATION} />
             <Modal
               isOpen={isOpen}
               onClose={handleClose}

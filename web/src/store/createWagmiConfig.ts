@@ -18,7 +18,7 @@ export function createWagmiConfig(rpcUrl: string, projectId?: string) {
     chains: [baseSepolia],
     connectors: [
       coinbaseWallet({
-        appName: 'andesFinance',
+        appName: 'Andes Finance',
         preference: 'smartWalletOnly',
       }),
     ],
