@@ -16,14 +16,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import SharedLayout from '@/components/SharedLayout';
-import { useBiconomy } from '@/context/BiconomyContext';
 import RequestLoanButton from './RequestLoanButton';
 import { A } from '@/components/layout/guide';
 
 const page = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
-  const { smartAccountAddress } = useBiconomy();
   const [amount, setAmount] = useState("");
   const [duration, setDuration] = useState(0);
 

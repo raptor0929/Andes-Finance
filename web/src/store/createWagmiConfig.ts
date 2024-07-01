@@ -1,3 +1,5 @@
+'use client';
+
 import { createConfig, http } from 'wagmi';
 import { base, baseSepolia } from 'wagmi/chains';
 import { coinbaseWallet } from 'wagmi/connectors';
@@ -16,7 +18,7 @@ export function createWagmiConfig(rpcUrl: string, projectId?: string) {
     chains: [baseSepolia],
     connectors: [
       coinbaseWallet({
-        appName: 'buildonchainapps',
+        appName: 'andesFinance',
         preference: 'smartWalletOnly',
       }),
     ],

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import AndesFinanceLogo from '../Global/AndesFinanceLogo';
 import LanguageSwitcher from '../Global/LanguageSwitcher';
 import AccountConnect from '../layout/header/AccountConnect';
+import { BlackCreateWalletButton } from '../layout/header/BlackCreateWalletButton';
 
 type ScrollComponentProps = {
   scrollToSection: (index: number) => void;
@@ -49,6 +50,9 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
         <div className="flex items-center gap-4">
           <NavbarItem>
             <LanguageSwitcher />
+          </NavbarItem>
+          <NavbarItem className="hidden lg:flex">
+            <BlackCreateWalletButton />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
             <AccountConnect />

@@ -1,9 +1,6 @@
-'use client';
-import { Button } from '@nextui-org/react';
-import { usePrivy } from '@privy-io/react-auth';
-import { useTranslation } from 'react-i18next';
+import { ConnectAccount } from '@coinbase/onchainkit/wallet';
 import { baseSepolia } from 'viem/chains';
-import { useChainId } from 'wagmi';
+import { useAccount, useChainId, useConnect, useDisconnect } from 'wagmi';
 import { AccountDropdown } from './AccountDropdown';
 import { AccountInfoPanel } from './AccountInfoPanel';
 
@@ -14,45 +11,31 @@ import { AccountInfoPanel } from './AccountInfoPanel';
  *  - Displays the wallet network
  */
 function AccountConnect() {
+  const account = useAccount();
+  const { status } = useConnect();
+  const { disconnect } = useDisconnect();
   const chainId = useChainId();
-  const { t } = useTranslation();
-  const { ready, authenticated, login, logout } = usePrivy();
-  const handleStart = () => {
-    if (!authenticated) login();
-  };
 
   return (
     <div
       className="flex flex-grow"
-      {...(!ready &&
-        authenticated && {
-          'aria-hidden': true,
-          style: {
-            opacity: 0,
-            pointerEvents: 'none',
-            userSelect: 'none',
-          },
-        })}
+      {...(status === 'pending' && {
+        'aria-hidden': true,
+        style: {
+          opacity: 0,
+          pointerEvents: 'none',
+          userSelect: 'none',
+        },
+      })}
     >
       {(() => {
-        if (!authenticated) {
-          return (
-            <Button
-              color="primary"
-              size="lg"
-              radius="full"
-              variant="bordered"
-              className="font-urbanist text-black"
-              onClick={handleStart}
-            >
-              {t('navbar.logIn')}
-            </Button>
-          );
+        if (account.status === 'disconnected') {
+          return <ConnectAccount />;
         }
 
-        if (ready && authenticated && chainId !== baseSepolia.id) {
+        if (account.status === 'connected' && chainId !== baseSepolia.id) {
           return (
-            <button onClick={logout} type="button">
+            <button onClick={() => disconnect()} type="button">
               Wrong network
             </button>
           );
@@ -63,7 +46,7 @@ function AccountConnect() {
             <div className="flex flex-grow flex-col md:hidden">
               <AccountInfoPanel />
             </div>
-            <div className="flex md:block">
+            <div className="flex hidden md:block">
               <AccountDropdown />
             </div>
           </>

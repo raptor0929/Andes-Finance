@@ -6,7 +6,6 @@ import { baseSepolia } from 'viem/chains';
 import { GameProvider } from '@/components/Global/GameProvider';
 import TranslationProvider from '@/components/Global/TranslationProvider';
 import i18n from '../../i18n';
-import { BiconomyProvider } from './BiconomyContext';
 
 type ProvidersProps = {
   children: ReactNode;
@@ -20,21 +19,7 @@ const Providers: FC<ProvidersProps> = ({ children }) => {
   return (
     <NextUIProvider>
       <TranslationProvider>
-        <PrivyProvider
-          appId={process.env.NEXT_PUBLIC_PRIVY_ID || ''}
-          config={{
-            supportedChains: [baseSepolia],
-            embeddedWallets: {
-              createOnLogin: 'users-without-wallets',
-              noPromptOnSignature: true,
-            },
-            loginMethods: ['email', 'google', 'twitter', 'discord', 'apple'],
-          }}
-        >
-          <BiconomyProvider>
-            <GameProvider>{children}</GameProvider>
-          </BiconomyProvider>
-        </PrivyProvider>
+        <GameProvider>{children}</GameProvider>
       </TranslationProvider>
     </NextUIProvider>
   );
