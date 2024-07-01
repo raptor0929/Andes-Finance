@@ -11,7 +11,6 @@ import {
 } from '@nextui-org/react';
 import { Badge } from '@nextui-org/react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useGame } from '@/components/Global/GameProvider';
 
@@ -29,6 +28,14 @@ const challenges = [
     subtitle: 'Y conecta con coinbase',
     status: 'no-done',
     link: '/dashboard/challenge/02',
+    challenges: [
+      {
+        title: 'RETO 2: Abre o conecta tu cuenta Farcaster',
+        description: 'Conectala con Coinbase',
+        label: 'USUARIO DE farcaster',
+        input: 'Escribe aquí tu usuario Farcaster',
+      },
+    ],
   },
   {
     number: '03',
@@ -36,6 +43,14 @@ const challenges = [
     subtitle: 'Y conecta con coinbase',
     status: 'coming',
     link: '/dashboard/challenge/03',
+    challenges: [
+      {
+        title: 'RETO 3: Ahorra 2 USD por una semana',
+        description: 'Conectala con Coinbase',
+        label: 'link de TRANSACCIÓN',
+        input: 'Pega aquí el link de la transacción',
+      },
+    ],
   },
   {
     number: '04',
@@ -43,6 +58,14 @@ const challenges = [
     subtitle: 'Y conecta con coinbase',
     status: 'coming',
     link: '/dashboard/challenge/04',
+    challenges: [
+      {
+        title: 'RETO 4: Haz un swap de 1 USDC A Optimism',
+        description: 'Conectala con Coinbase',
+        label: 'link de TRANSACCIÓN',
+        input: 'Pega aquí el link de la transacción',
+      },
+    ],
   },
   {
     number: '05',
@@ -82,34 +105,43 @@ function LoanRoute() {
               <TableRow key={index} className=" text-black">
                 <TableCell>
                   <div className="relative inline-block h-10 w-10">
-                    <Badge
-                      content={
-                        <Image
-                          src={
-                            challenge.status === 'done'
-                              ? '/images/check-green.svg'
-                              : '/images/lock.svg'
-                          }
-                          width={15}
-                          height={15}
-                          alt="status"
-                        />
-                      }
-                      className="bg-transparent"
-                      shape="circle"
-                      showOutline={false}
-                    >
+                    {gameState === index + 1 ? (
                       <Image
                         src="/images/circle.svg"
                         width={150}
                         height={150}
                         alt="circle"
-                        className={challenge.status !== 'done' ? 'opacity-25' : 'opacity-100'}
+                        className={gameState < index + 1 ? 'opacity-25' : 'opacity-100'}
                       />
-                    </Badge>
+                    ) : (
+                      <Badge
+                        content={
+                          <Image
+                            src={
+                              gameState > index + 1 ? '/images/check-green.svg' : '/images/lock.svg'
+                            }
+                            width={15}
+                            height={15}
+                            alt="status"
+                          />
+                        }
+                        className="bg-transparent"
+                        shape="circle"
+                        showOutline={false}
+                      >
+                        <Image
+                          src="/images/circle.svg"
+                          width={150}
+                          height={150}
+                          alt="circle"
+                          className={gameState < index + 1 ? 'opacity-25' : 'opacity-100'}
+                        />
+                      </Badge>
+                    )}
+
                     <span
                       className={`absolute inset-0 z-10 flex items-center justify-center  ${
-                        challenge.status === 'done' ? 'text-white' : 'text-[#8AA9FF]'
+                        gameState > index ? 'text-white' : 'text-[#8AA9FF]'
                       }`}
                     >
                       {challenge.number}

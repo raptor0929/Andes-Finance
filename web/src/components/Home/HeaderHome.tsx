@@ -58,7 +58,7 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
               <BlackCreateWalletButton />
             </NavbarItem>
           )}
-          <NavbarItem className="hidden lg:flex">
+          <NavbarItem className="hidden rounded-lg bg-information px-10 py-3 text-lg font-bold lg:flex">
             <AccountConnect />
           </NavbarItem>
         </div>

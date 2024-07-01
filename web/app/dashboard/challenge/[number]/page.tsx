@@ -17,6 +17,27 @@ import { FaUpload } from 'react-icons/fa';
 import { useGame } from '@/components/Global/GameProvider';
 import SharedLayout from '@/components/SharedLayout';
 
+const challenges = {
+  '02': {
+    title: 'RETO 2: Abre o conecta tu cuenta Farcaster',
+    description: 'Conectala con Coinbase',
+    label: 'USUARIO DE farcaster',
+    input: 'Escribe aquí tu usuario Farcaster',
+  },
+  '03': {
+    title: 'RETO 3: Ahorra 2 USD por una semana',
+    description: 'Conectala con Coinbase',
+    label: 'LINK DE TRANSACCIÓN',
+    input: 'Pega aquí el link de la transacción',
+  },
+  '04': {
+    title: 'RETO 4: Haz un swap de 1 USDC A Optimism',
+    description: 'Conectala con Coinbase',
+    label: 'LINK DE TRANSACCIÓN',
+    input: 'Pega aquí el link de la transacción',
+  },
+};
+
 const page = () => {
   const pathname = usePathname();
   const pathParts = pathname.split('/');
@@ -56,108 +77,77 @@ const page = () => {
     setFiles([...files, ...newFiles]);
   };
 
-  if (id === '04') {
+  if (id !== '01') {
     return (
       <SharedLayout>
         <div className="h-full p-40 px-4 py-2">
           <div className="h-full p-20">
-            <div className="flex h-full w-full flex-col  bg-white px-20 py-12">
-              <div className="py-10">
-                <p className="text-2xl text-information">RETO 4: Sube tus documentos</p>
-                <span className="text-sm text-gray-500">
-                  Sube un extracto de tu banco de los ultimos 6 meses.
-                </span>
-              </div>
-              <div className="flex h-1/2 w-full items-center justify-center gap-10 p-4">
-                <div
-                  className="flex w-full max-w-md cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-white p-6"
-                  onDragOver={handleDragOver}
-                  onDrop={handleDrop}
-                  onClick={() => fileInputRef.current?.click()}
-                >
-                  <FaUpload className="text-6xl text-gray-400" />
-                  <p className="mt-4 text-lg text-gray-500">
-                    Arraste e solte os arquivos aqui ou clique para fazer upload
-                  </p>
-                  <input
-                    type="file"
-                    ref={fileInputRef}
-                    className="hidden"
-                    multiple
-                    onChange={handleFiles}
-                  />
+            <div className="h-full bg-white px-20 py-12">
+              <p className="text-2xl text-information">{challenges[id].title}</p>
+              <span className="text-sm text-gray-500">{challenges[id].description}</span>
+              <div className="mt-5 flex flex-col items-center">
+                <div className="flex w-full gap-5 py-10">
+                  <div className="flex w-1/2 flex-col gap-2">
+                    <label className="text-sm text-black">{challenges[id].label}</label>
+                    <Input
+                      key="outside"
+                      size="lg"
+                      color="primary"
+                      variant="bordered"
+                      type="email"
+                      labelPlacement="outside"
+                      placeholder={challenges[id].input}
+                      className="text-black"
+                    />
+                  </div>
                 </div>
-
-                {files.length > 0 ? (
-                  <div className="mt-6 w-full max-w-md">
-                    <h3 className="text-lg font-semibold text-black">Subir archivo:</h3>
-                    <ul className="mt-2">
-                      {files.map((file, index) => (
-                        <li
-                          key={index}
-                          className="flex items-center justify-between border-b border-gray-300 p-2"
-                        >
-                          <span className="text-gray-700">{file.name}</span>
-                          <span className="text-sm text-gray-500">
-                            {(file.size / 1024).toFixed(2)} KB
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : (
-                  <div className="mt-6 w-full max-w-md">
-                    <h3 className="text-lg font-semibold" />
-                    <ul className="mt-2" />
-                  </div>
-                )}
               </div>
-              <div className="mt-4 flex items-center justify-center">
+              <div className="flex items-center justify-center py-4">
                 <Button
                   radius="full"
                   color="primary"
+                  className="px-16 text-lg"
                   onClick={handleButtonClick}
-                  className="w-1/3 py-4 text-lg"
                 >
-                  Upload File
+                  ENVIAR RETO
                 </Button>
               </div>
-              <Modal
-                isOpen={isOpen}
-                onClose={handleClose}
-                className="text-black"
-                classNames={{ closeButton: 'text-primary font-bold text-3xl' }}
-              >
-                <ModalContent>
-                  {(onClose) => (
-                    <>
-                      <ModalHeader className="flex flex-col items-center gap-5 py-12">
-                        <Image src="/images/check.svg" width={50} height={50} alt="check" />
-                        <span className="text-center text-3xl text-[#1744F9]">
-                          ¡Reto {id} enviado!
-                        </span>
-                      </ModalHeader>
-                      <ModalBody className="px-20 ">
-                        <p className="text-center">
-                          Gracias por enviarnos tu reto. Lo revisaremos y lo aprobaremos dentro de
-                          24 horas
-                        </p>
-                      </ModalBody>
-                      <ModalFooter className="flex justify-center py-12">
-                        <Button
-                          color="primary"
-                          onPress={handleClose}
-                          className="px-8 py-6 text-black"
-                          radius="full"
-                        >
-                          ACEPTAR
-                        </Button>
-                      </ModalFooter>
-                    </>
-                  )}
-                </ModalContent>
-              </Modal>
             </div>
+            <Modal
+              isOpen={isOpen}
+              onClose={handleClose}
+              className="text-black"
+              classNames={{ closeButton: 'text-primary font-bold text-3xl' }}
+            >
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex flex-col items-center gap-5 py-12">
+                      <Image src="/images/check.svg" width={50} height={50} alt="check" />
+                      <span className="text-center text-3xl text-[#1744F9]">
+                        ¡Reto {id} enviado!
+                      </span>
+                    </ModalHeader>
+                    <ModalBody className="px-20 ">
+                      <p className="text-center">
+                        Gracias por enviarnos tu reto. Lo revisaremos y lo aprobaremos dentro de 24
+                        horas
+                      </p>
+                    </ModalBody>
+                    <ModalFooter className="flex justify-center py-12">
+                      <Button
+                        color="primary"
+                        onPress={handleClose}
+                        className="px-8 py-6 text-black"
+                        radius="full"
+                      >
+                        ACEPTAR
+                      </Button>
+                    </ModalFooter>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
           </div>
         </div>
       </SharedLayout>
@@ -177,9 +167,7 @@ const page = () => {
               <div className="mt-5 flex flex-col items-center">
                 <div className="flex w-full gap-5 py-10">
                   <div className="flex w-1/2 flex-col gap-2">
-                    <label className="ml-6 text-sm text-black">
-                      DIRECCIÓN DE CUENTA 1 - AHORRO
-                    </label>
+                    <label className="text-sm text-black">DIRECCIÓN DE CUENTA 1 - AHORRO</label>
                     <Input
                       key="outside"
                       size="lg"
@@ -192,9 +180,7 @@ const page = () => {
                     />
                   </div>
                   <div className="flex w-1/2 flex-col gap-2">
-                    <label className="ml-6 text-sm text-black">
-                      DIRECCIÓN DE CUENTA 2 - TRABAJO
-                    </label>
+                    <label className="text-sm text-black">DIRECCIÓN DE CUENTA 2 - TRABAJO</label>
                     <Input
                       key="outside"
                       size="lg"
@@ -209,9 +195,7 @@ const page = () => {
                 </div>
                 <div className="flex w-full gap-5 py-10">
                   <div className="flex w-1/2 flex-col gap-2">
-                    <label className="ml-6 text-sm text-black">
-                      DIRECCIÓN DE CUENTA 3 - AHORRO
-                    </label>
+                    <label className="text-sm text-black">DIRECCIÓN DE CUENTA 3 - AHORRO</label>
                     <Input
                       key="outside"
                       size="lg"
@@ -230,7 +214,7 @@ const page = () => {
                   className="px-16 text-lg"
                   onClick={handleButtonClick}
                 >
-                  CONTINUAR
+                  ENVIAR RETO
                 </Button>
               </div>
               <Modal
