@@ -19,6 +19,9 @@ const nextConfig = withPWA({
   typescript: {
     ignoreBuildErrors: true
   },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
   reactStrictMode: false,
   i18n,
   images: {

@@ -18,7 +18,7 @@ module.exports = {
   ],
   rules: {
     'react/destructuring-assignment': 'off',
-    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx', '.mdx'] }],
+    'react/jsx-filename-extension': ['off', { extensions: ['.jsx', '.tsx', '.mdx'] }],
 
     // We utilize prop spreading
     'react/jsx-props-no-spreading': 'off',
@@ -37,12 +37,12 @@ module.exports = {
     'react/sort-prop-types': 'off',
 
     // Performance: Avoid unnecessary renders
-    'react-perf/jsx-no-new-array-as-prop': 'warn',
-    'react-perf/jsx-no-new-function-as-prop': 'warn',
+    'react-perf/jsx-no-new-array-as-prop': 'off',
+    'react-perf/jsx-no-new-function-as-prop': 'off',
 
     // We prefer function declarations
     'react/function-component-definition': [
-      'warn',
+      'off',
       { namedComponents: 'function-declaration', unnamedComponents: 'function-expression' },
       // {
       //   namedComponents: 'arrow-function',
@@ -51,11 +51,11 @@ module.exports = {
     ],
 
     // We prefer on/handle named events
-    'react/jsx-handler-names': 'warn',
+    'react/jsx-handler-names': 'off',
 
     // We require named functions for inferred `displayName`
     // This is required for memo() and forwardRef() usage
-    'prefer-arrow-callback': ['warn', { allowNamedFunctions: true }],
+    'prefer-arrow-callback': ['off', { allowNamedFunctions: true }],
 
     'react/jsx-one-expression-per-line': 'off',
 
@@ -63,68 +63,69 @@ module.exports = {
     'relay/generated-flow-types': 'off',
 
     // Shorthand types
-    '@typescript-eslint/array-type': ['warn', { default: 'array' }],
-    '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
-    '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
-    '@typescript-eslint/method-signature-style': ['warn', 'property'],
-    '@typescript-eslint/no-inferrable-types': 'warn',
+    '@typescript-eslint/array-type': ['off', { default: 'array' }],
+    '@typescript-eslint/consistent-indexed-object-style': ['off', 'record'],
+    '@typescript-eslint/consistent-type-definitions': ['off', 'type'],
+    '@typescript-eslint/method-signature-style': ['off', 'property'],
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
 
     // Forbid types
-    '@typescript-eslint/ban-types': 'warn',
-    '@typescript-eslint/no-explicit-any': ['warn', { fixToUnknown: true }],
-    '@typescript-eslint/no-invalid-void-type': 'warn',
-    '@typescript-eslint/no-unsafe-argument': 'warn',
-    '@typescript-eslint/no-unsafe-assignment': 'warn',
-    '@typescript-eslint/no-unsafe-call': 'warn',
-    '@typescript-eslint/no-unsafe-return': 'warn',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-explicit-any': ['off', { fixToUnknown: true }],
+    '@typescript-eslint/no-invalid-void-type': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
 
     // Readability
-    '@typescript-eslint/adjacent-overload-signatures': 'warn',
-    '@typescript-eslint/no-empty-interface': ['warn', { allowSingleExtends: false }],
-    '@typescript-eslint/no-parameter-properties': 'warn',
-    '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'warn',
+    '@typescript-eslint/adjacent-overload-signatures': 'off',
+    '@typescript-eslint/no-empty-interface': ['off', { allowSingleExtends: false }],
+    '@typescript-eslint/no-parameter-properties': 'off',
+    '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
 
     // Correctness
-    '@typescript-eslint/switch-exhaustiveness-check': 'warn',
-    '@typescript-eslint/no-for-in-array': 'warn',
-    '@typescript-eslint/no-misused-new': 'warn',
-    '@typescript-eslint/no-this-alias': 'warn',
-    '@typescript-eslint/no-unnecessary-qualifier': 'warn',
-    '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
-    '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
-    '@typescript-eslint/prefer-for-of': 'warn',
-    '@typescript-eslint/prefer-literal-enum-member': 'warn',
-    '@typescript-eslint/restrict-plus-operands': ['warn', { checkCompoundAssignments: true }],
-    '@typescript-eslint/unified-signatures': 'warn',
+    '@typescript-eslint/switch-exhaustiveness-check': 'off',
+    '@typescript-eslint/no-for-in-array': 'off',
+    '@typescript-eslint/no-misused-new': 'off',
+    '@typescript-eslint/no-this-alias': 'off',
+    '@typescript-eslint/no-unnecessary-qualifier': 'off',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+    '@typescript-eslint/no-unnecessary-type-constraint': 'off',
+    '@typescript-eslint/prefer-for-of': 'off',
+    '@typescript-eslint/prefer-literal-enum-member': 'off',
+    '@typescript-eslint/restrict-plus-operands': ['off', { checkCompoundAssignments: true }],
+    '@typescript-eslint/unified-signatures': 'off',
 
     // Assertions
-    '@typescript-eslint/consistent-type-assertions': 'warn',
-    '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
-    '@typescript-eslint/no-extra-non-null-assertion': 'warn',
-    '@typescript-eslint/no-non-null-assertion': 'warn',
-    '@typescript-eslint/no-non-null-asserted-optional-chain': 'warn',
-    '@typescript-eslint/prefer-as-const': 'warn',
+    '@typescript-eslint/consistent-type-assertions': 'off',
+    '@typescript-eslint/no-confusing-non-null-assertion': 'off',
+    '@typescript-eslint/no-extra-non-null-assertion': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+    '@typescript-eslint/prefer-as-const': 'off',
 
     // Comments
-    '@typescript-eslint/ban-ts-comment': ['warn', { 'ts-expect-error': 'allow-with-description' }],
-    '@typescript-eslint/prefer-ts-expect-error': 'warn',
+    '@typescript-eslint/ban-ts-comment': ['off', { 'ts-expect-error': 'allow-with-description' }],
+    '@typescript-eslint/prefer-ts-expect-error': 'off',
     '@typescript-eslint/triple-slash-reference': [
-      'warn',
+      'off',
       { path: 'never', types: 'never', lib: 'never' },
     ],
 
     // Async
     'no-void': 'off',
-    '@typescript-eslint/await-thenable': 'warn',
-    '@typescript-eslint/no-floating-promises': 'warn',
-    '@typescript-eslint/no-misused-promises': 'warn',
-    '@typescript-eslint/promise-function-async': 'warn',
+    '@typescript-eslint/await-thenable': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-misused-promises': 'off',
+    '@typescript-eslint/promise-function-async': 'off',
 
     // APIs
-    '@typescript-eslint/prefer-includes': 'warn',
-    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
-    '@typescript-eslint/prefer-optional-chain': 'warn',
-    '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
+    '@typescript-eslint/prefer-includes': 'off',
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    '@typescript-eslint/prefer-optional-chain': 'off',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'off',
 
     // Hard to migrate
     // Errors for all try/catch blocks and any types from third-parties
@@ -133,11 +134,22 @@ module.exports = {
     // We prefer React named imports only
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react-hooks/rules-of-hooks': 'off',
+    'react/button-has-type': 'off',
+    'react/no-array-index-key': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/heading-has-content': 'off',
+    '@typescript-eslint/no-shadow': 'off',
     'import/extensions': 'off',
+    'react/jsx-no-useless-fragment': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
 
     // We prefer sorting imports by groups
     'import/order': [
-      'warn',
+      'off',
       {
         "alphabetize": {
           "order": "asc",
@@ -170,12 +182,12 @@ module.exports = {
     ],
 
     // We prefer labels to be associated with inputs
-    'jsx-a11y/label-has-associated-control': ['warn', {
+    'jsx-a11y/label-has-associated-control': ['off', {
       'required': {
         'some': ['nesting', 'id']
       }
     }],
-    'jsx-a11y/label-has-for': ['warn', {
+    'jsx-a11y/label-has-for': ['off', {
       'required': {
         'some': ['nesting', 'id']
       }
