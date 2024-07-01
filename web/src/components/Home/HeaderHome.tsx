@@ -16,7 +16,7 @@ const HeaderHome: React.FC<ScrollComponentProps> = ({ scrollToSection, activeSec
   const { t } = useTranslation();
   const { address } = useAccount();
   return (
-    <Navbar className="z-10 bg-background-1 p-4" maxWidth="2xl">
+    <Navbar className="z-0 bg-background-1 p-4" maxWidth="2xl">
       <NavbarContent className="w-full justify-between">
         <NavbarBrand>
           <Link color={activeSection === 0 ? undefined : 'foreground'}>
