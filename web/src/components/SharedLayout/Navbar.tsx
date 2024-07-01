@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <div className="flex h-full items-center justify-between  font-urbanist text-black">
       <div className="w-1/6 px-10 text-3xl">Welcome!</div>
-      <div className="flex px-10">
+      <div className="flex items-center justify-center gap-2 px-10">
         <LanguageSwitcher />
         {!address && <BlackCreateWalletButton />}
         <AccountConnect />

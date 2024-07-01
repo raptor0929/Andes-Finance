@@ -72,6 +72,250 @@
         "labelPhone": "phone number",
         "inputPhone": "Could your write your phone number?",
         "send": "Send"
-    }
+    },
 
+    
+    "dashboard": {
+        "credit_score": {
+            "score": 500,
+            "status": "Normal",
+            "description": "The score ranges from 1 to 1000, the closer to 1000, the better financing opportunities you will have."
+        },
+        "total_funding_received": {
+            "amount": "$0.00",
+            "description": "from last month"
+        },
+        "quotas": {
+            "current": "0/0",
+            "description": "from last week"
+        },
+        "total_payment": {
+            "amount": "$0",
+            "interest": "0% of interest"
+        },
+        "pay_day": {
+            "current": "-",
+            "next": "Next payment day"
+        },
+        "loan_route": {
+            "title": "Start the route to request your loan!",
+            "description": "Complete these 4 challenges over 4 weeks",
+            "steps": [
+                {
+                    "step": "01",
+                    "title": "open or connect your account",
+                    "description": "To start building your credit history, start with your first step.",
+                    "action": "START"
+                },
+                {
+                    "step": "02",
+                    "title": "Open a Farcaster account",
+                    "description": "And connect it with Coinbase"
+                },
+                {
+                    "step": "03",
+                    "title": "Save for 3 weeks",
+                    "description": "And connect it with Coinbase"
+                },
+                {
+                    "step": "04",
+                    "title": "make a simple transfer",
+                    "description": "And connect it with Coinbase"
+                }
+            ]
+        },
+        "get_loan": {
+            "title": "GET YOUR LOAN",
+            "description": "Choose how much you want us to lend you and in how much time. Calculate here"
+        }
+    },
+    "loans": {
+        "my_loans": {
+            "title": "My loans",
+            "description": "AT THE MOMENT YOU HAVE NO LOANS, request one now.",
+            "action": "request a loan"
+        },
+        "apply_loan": {
+            "title": "REQUEST LOAN",
+            "tutorial": "VIEW TUTORIAL",
+            "challenges": [
+                {
+                    "challenge": "01",
+                    "title": "CHALLENGE 1: Open or connect 3 Coinbase accounts",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "accounts": [
+                        {
+                            "account_type": "savings",
+                            "address": "0xsdj2932mfekvcj24fn288f8fn"
+                        },
+                        {
+                            "account_type": "work",
+                            "address": "Paste your wallet address here"
+                        },
+                        {
+                            "account_type": "study",
+                            "address": "Paste your wallet address here"
+                        }
+                    ],
+                    "action": "send challenge 1",
+                    "youtube_link": "YouTube Link",
+                    "confirmation": {
+                        "title": "Challenge 1 Confirmation",
+                        "description": "Challenge 1 sent! Thank you for sending us your challenge. We will review and approve it within 24 hours. Remember that the next challenge will open in 7 days",
+                        "action": "Accept"
+                    },
+                    "completed": {
+                        "title": "CHALLENGE 1 COMPLETE",
+                        "action": "activate block 2"
+                    }
+                },
+                {
+                    "challenge": "02",
+                    "title": "CHALLENGE 2: Open or connect your Farcaster account",
+                    "description": "Connect it with Coinbase",
+                    "farcaster_user": "Write your Farcaster username here",
+                    "action": "send challenge 2"
+                },
+                {
+                    "challenge": "03",
+                    "title": "CHALLENGE 3: Save 2 USD for one week",
+                    "description": "Prove to be a committed saver",
+                    "transaction_link": "Paste the transaction link here",
+                    "action": "send challenge 3"
+                },
+                {
+                    "challenge": "04",
+                    "title": "CHALLENGE 4: Swap 1 USDC to Optimism",
+                    "description": "Make the coin exchange",
+                    "transaction_link": "Paste the transaction link here",
+                    "action": "send challenge 4"
+                }
+            ]
+        },
+        "unlock_loan": {
+            "title": "Dashboard with all steps unlocked",
+            "action": "Get your loan",
+            "start": "Start"
+        },
+        "disburse_loan": {
+            "title": "Disburse your loan",
+            "confirm_details": {
+                "account_address": {
+                    "title": "Deposit account address",
+                    "address": "0xsdj2932mfekvcj24fn288f8fn",
+                    "description": "We will deposit the loan into this account. It must be in USDC and on the Base network."
+                },
+                "email_address": {
+                    "title": "Email address",
+                    "address": "cristinaescobar@gmail.com",
+                    "description": "We will send payment notifications to this email"
+                },
+                "action": "CONTINUE"
+            },
+            "loan_amount": {
+                "title": "Disburse your loan",
+                "description": "Choose how much you want us to lend you",
+                "min_amount": "$10",
+                "max_amount": "$500",
+                "selected_amount": "$500",
+                "repayment_period": {
+                    "description": "IN HOW MANY MONTHS DO YOU WANT TO PAY?",
+                    "months": 3
+                },
+                "action": "Request",
+                "final_payment": {
+                    "title": "FINAL PAYMENT",
+                    "amount": "$510",
+                    "interest": "2%",
+                    "payment_dates": [
+                        "23/7/24 - $170",
+                        "23/8/24 - $170",
+                        "23/9/24 - $170"
+                    ],
+                    "confirmation": {
+                        "description": "We have already disbursed your loan! You can see the transaction details here: 0xsdj2932mfekvcj24fn288f8fn",
+                        "action": "Accept"
+                    }
+                }
+            }
+        },
+        "loan_status": {
+            "title": "MY LOANS",
+            "loan_details": [
+                {
+                    "request_date": "06/23/2024",
+                    "borrow_amount": "$500",
+                    "to_pay": "$510",
+                    "quotas": 3,
+                    "interest": "2%",
+                    "payments": [
+                        {
+                        "title": "1st payment",
+                        "amount": "$170",
+                        "due_date": "07/23/24",
+                        "status": "Paid"
+                        },
+                        {
+                        "title": "2nd payment",
+                        "amount": "$170",
+                        "due_date": "08/23/24",
+                        "status": "Pending"
+                        },
+                        {
+                        "title": "3rd payment",
+                        "amount": "$170",
+                        "due_date": "09/23/24",
+                        "status": "Pending"
+                        }
+                    ]
+                }
+            ],
+            "post_payment_status": {
+                "title": "MY LOANS",
+                "loan_details": {
+                    "request_date": "06/23/2024",
+                    "borrow_amount": "$500",
+                    "remaining_amount": "$340",
+                    "quotas": 3,
+                    "interest": "2%",
+                    "payments": [
+                        {
+                            "title": "1st payment",
+                            "amount": "$170",
+                            "due_date": "07/23/24",
+                            "status": "Paid"
+                        },
+                        {
+                            "title": "2nd payment",
+                            "amount": "$170",
+                            "due_date": "08/23/24",
+                            "status": "Pending"
+                        },
+                        {
+                            "title": "3rd payment",
+                            "amount": "$170",
+                            "due_date": "09/23/24",
+                            "status": "Pending"
+                        }
+                    ]
+                }
+            }
+        },
+        "dashboard": {
+            "title": "DASHBOARD",
+            "congratulations": "Congratulations on getting your first loan!",
+            "description": "You can request a new loan when you finish paying off your current loan.",
+            "gift": {
+                "description": "Now you can claim your 10 USDC gift!",
+                "action": "GET GIFT"
+            }
+        },
+        "payment": {
+            "confirmation": {
+                "title": "Payment made",
+                "description": "Congratulations, you have paid your first installment on time!",
+                "action": "Accept"
+            }
+        }
+    }
 }

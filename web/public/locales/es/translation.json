@@ -1,76 +1,321 @@
 {
     "welcome": "Bienvenido a mi inglés",
     "data": {
-        "number": "esto es un número",
-        "string": "esto es una cadena"
+      "number": "esto es un número",
+      "string": "esto es una cadena"
     },
     "navbar": {
-        "home": "Inicio",
-        "howWorks": "¿Cómo funciona?",
-        "learning": "Aprendiendo",
-        "logIn": "CONECTAR",
-        "signUp": "REGISTRARSE"
+      "home": "Inicio",
+      "howWorks": "¿Cómo funciona?",
+      "learning": "Aprender",
+      "logIn": "CONECTAR",
+      "signUp": "REGISTRARSE"
     },
     "hereSection": {
-        "shortDescription": "100% seguro y confiable",
-        "title": "Obtén un préstamo mientras aprendes y juegas.",
-        "start": "Empecemos",
-        "videoDescription":"Sabemos que obtener un préstamo no es fácil, por eso te ayudamos a alcanzar tus objetivos con microcréditos.",
-        "calculate": "Calcula tu préstamo"
+      "shortDescription": "100% seguro y confiable",
+      "title": "Obtén un préstamo mientras aprendes y juegas.",
+      "start": "Comencemos",
+      "videoDescription": "Sabemos que obtener un préstamo no es fácil, por eso te ayudamos a alcanzar tus metas con microcréditos.",
+      "calculate": "Calcula tu préstamo"
     },
     "howItWorks": {
-        "mainTitle": "¿Cómo funciona?",
-        "firstTitle": "Comienza tu camino financiero",
-        "firstDescription": "Comienza a construir tu historial crediticio en blockchain y adquiere préstamos.",
-        "secondTitle": "Aprende gratis",
-        "secondDescription": "Aprende cursos básicos de finanzas descentralizadas y adquiere tu primer préstamo cripto.",
-        "thirdTitle": "Acepta desafíos",
-        "thirdDescription": "Desbloquea desafíos cada semana mientras aprendes y obtén un préstamo",
-        "fourthTitle": "Obtén tu préstamo",
-        "fourthDescription": "Obtén tu primer préstamo cripto y construye historial"
+      "mainTitle": "¿Cómo funciona?",
+      "firstTitle": "Comienza tu camino financiero",
+      "firstDescription": "Empieza a construir tu historial crediticio en blockchain y adquiere préstamos.",
+      "secondTitle": "Aprende gratis",
+      "secondDescription": "Aprende cursos básicos de finanzas descentralizadas y adquiere tu primer préstamo en criptomonedas.",
+      "thirdTitle": "Acepta desafíos",
+      "thirdDescription": "Desbloquea desafíos cada semana mientras aprendes y obtienes un préstamo.",
+      "fourthTitle": "Obtén tu préstamo",
+      "fourthDescription": "Obtén tu primer préstamo en criptomonedas y construye historial."
     },
     "getStarted": {
-        "title": "¿Cómo empezar?",
-        "description": "Para obtener un préstamo con nosotros debes completar 4 desafíos en 4 semanas. Y si eres nuevo, no te preocupes, tenemos cursos totalmente gratuitos para ti.",
-        "imageDescription": "¡Registrate ahora y obtén tus primer crédito con 10$ de regalo!",
-        "firstCourse": "Conecta o abre tu primera cartera cripto",
-        "firstDescription": "¿Quieres obtener un préstamo cripto? ¿No sabes por dónde empezar? El primer paso es crear una cartera.",
-        "secondCourse": "Ahorra cripto por 3 semanas",
-        "secondDescription": "¿Quieres obtener un préstamo cripto? ¿No sabes por dónde empezar? El primer paso es crear una cartera.",
-        "thirdCourse": "Haz una transferencia/puente fácil",
-        "thirdDescription": "¿Quieres obtener un préstamo cripto? ¿No sabes por dónde empezar? El primer paso es crear una cartera.",
-        "fourthCourse": "Transfiere dinero a tu cartera",
-        "fourthDescription": "¿Quieres obtener un préstamo cripto? ¿No sabes por dónde empezar? El primer paso es crear una cartera."
+      "title": "¿Cómo empezar?",
+      "description": "Para obtener un préstamo con nosotros debes completar 4 desafíos en 4 semanas. Y si eres nuevo, no te preocupes, tenemos cursos totalmente gratuitos para ti.",
+      "imageDescription": "¡Regístrate ahora y obtén tu primer crédito con un bono de $10!",
+      "firstCourse": "Conecta o abre tu primera billetera de criptomonedas",
+      "firstDescription": "¿Quieres obtener un préstamo en criptomonedas? ¿No sabes por dónde empezar? El primer paso es crear una billetera.",
+      "secondCourse": "Ahorra criptomonedas durante 3 semanas",
+      "secondDescription": "¿Quieres obtener un préstamo en criptomonedas? ¿No sabes por dónde empezar? El primer paso es crear una billetera.",
+      "thirdCourse": "Haz una transferencia/puente fácil",
+      "thirdDescription": "¿Quieres obtener un préstamo en criptomonedas? ¿No sabes por dónde empezar? El primer paso es crear una billetera.",
+      "fourthCourse": "Transfiere dinero a tu billetera",
+      "fourthDescription": "¿Quieres obtener un préstamo en criptomonedas? ¿No sabes por dónde empezar? El primer paso es crear una billetera."
     },
     "calculateLoan": {
-        "letStart": "Vamos a empezar",
-        "title": "Calcula tu préstamo",
-        "shortDescription": "¿Cuánto necesitas?",
-        "subtitle": "¿En cuántos meses quieres pagar?",
-        "finalPayment": "Pago final",
-        "interest": "interés",
-        "iWantIt": "Lo quiero"
+      "letStart": "Comencemos",
+      "title": "Calcula tu préstamo",
+      "shortDescription": "¿Cuánto necesitas?",
+      "subtitle": "¿En cuántos meses quieres pagar?",
+      "finalPayment": "Pago Final",
+      "interest": "interés",
+      "iWantIt": "Lo quiero"
     },
     "freeCourses": {
-        "shortDescription": "¿Necesitas aprender más?",
-        "title": "Empecemos con cursos gratuitos",
-        "description": "Elige entre una variedad de cursos aquellos que sean relevantes para tu perfil.",
-        "firstCourseTitle": "Defi",
-        "firstCourseDescription": "Entiende las finanzas descentralizadas, clave para tu camino financiero",
-        "secondCourseTitle": "Base",
-        "secondCourseDescription": "Aprende sobre la blockchain que está revolucionando el mundo cripto",
-        "thirdCourseTitle": "Web",
-        "thirdCourseDescription": "aprende los conceptos básicos de web3 y blockchain"
+      "shortDescription": "¿Necesitas aprender más?",
+      "title": "Comencemos con cursos gratuitos",
+      "description": "Elige entre una variedad de cursos aquellos que sean relevantes para tu perfil.",
+      "firstCourseTitle": "DeFi",
+      "firstCourseDescription": "Entiende las finanzas descentralizadas, clave para tu camino financiero",
+      "secondCourseTitle": "Base",
+      "secondCourseDescription": "Aprende sobre la blockchain que está revolucionando el mundo cripto",
+      "thirdCourseTitle": "Web3",
+      "thirdCourseDescription": "Aprende los conceptos básicos de web3 y blockchain"
     },
     "investorInterest": {
-        "title": "¿Quieres ser inversor?",
-        "description": "Déjanos tu información y te contactaremos para contarte todos los beneficios de ser inversor con nosotros.",
-        "labelName": "NOMBRES Y APELLIDOS",
-        "inputName": "¿Podrías escribir tu nombre?",
-        "labelEmail": "CORREO ELECTRÓNICO",
-        "inputEmail": "¿Podrías escribir tu correo electrónico?",
-        "labelPhone": "número de teléfono",
-        "inputPhone": "¿Podrías escribir tu número de teléfono?",
-        "send": "Enviar"
+      "title": "¿Quieres ser inversor?",
+      "description": "Déjanos tu información y nos pondremos en contacto contigo para contarte todos los beneficios de ser inversor con nosotros.",
+      "labelName":"NOMBRES Y APELLIDOS",
+      "inputName": "¿Podrías escribir tus nombres?",
+      "labelEmail": "CORREO ELECTRÓNICO",
+      "inputEmail": "¿Podrías escribir tu correo electrónico?",
+      "labelPhone": "NÚMERO DE TELÉFONO",
+      "inputPhone": "¿Podrías escribir tu número de teléfono?",
+      "send": "Enviar"
+    },
+    "dashboard": {
+      "credit_score": {
+        "score": 500,
+        "status": "Normal",
+        "description": "El puntaje varía de 1 a 1000, cuanto más cercano a 1000, mejores oportunidades de financiamiento tendrás."
+      },
+      "total_funding_received": {
+        "amount": "$0.00",
+        "description": "desde el mes pasado"
+      },
+      "quotas": {
+        "current": "0/0",
+        "description": "desde la semana pasada"
+      },
+      "total_payment": {
+        "amount": "$0",
+        "interest": "0% de interés"
+      },
+      "pay_day": {
+        "current": "-",
+        "next": "Próximo día de pago"
+      },
+      "loan_route": {
+        "title": "¡Comienza la ruta para solicitar tu préstamo!",
+        "description": "Completa estos 4 desafíos en 4 semanas",
+        "steps": [
+          {
+            "step": "01",
+            "title": "abre o conecta tu cuenta",
+            "description": "Para empezar a construir tu historial crediticio, comienza con tu primer paso.",
+            "action": "EMPEZAR"
+          },
+          {
+            "step": "02",
+            "title": "Abre una cuenta Farcaster",
+            "description": "Y conéctala con Coinbase"
+          },
+          {
+            "step": "03",
+            "title": "Ahorra durante 3 semanas",
+            "description": "Y conéctala con Coinbase"
+          },
+          {
+            "step": "04",
+            "title": "haz una transferencia sencilla",
+            "description": "Y conéctala con Coinbase"
+          }
+        ]
+      },
+      "get_loan": {
+        "title": "OBTÉN TU PRÉSTAMO",
+        "description": "Elige cuánto quieres que te prestemos y en cuánto tiempo. Calcula aquí"
+      }
+    },
+    "loans": {
+      "my_loans": {
+        "title": "Mis préstamos",
+        "description": "ACTUALMENTE NO TIENES PRÉSTAMOS, solicita uno ahora.",
+        "action": "solicitar un préstamo"
+      },
+      "apply_loan": {
+        "title": "SOLICITAR PRÉSTAMO",
+        "tutorial": "VER TUTORIAL",
+        "challenges": [
+          {
+            "challenge": "01",
+            "title": "DESAFÍO 1: Abre o conecta 3 cuentas de Coinbase",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "accounts": [
+              {
+                "account_type": "ahorros",
+                "address": "0xsdj2932mfekvcj24fn288f8fn"
+              },
+              {
+                "account_type": "trabajo",
+                "address": "Pega tu dirección de billetera aquí"
+              },
+              {
+                "account_type": "estudio",
+                "address": "Pega tu dirección de billetera aquí"
+              }
+            ],
+            "action": "enviar desafío 1",
+            "youtube_link": "Enlace de YouTube",
+            "confirmation": {
+              "title": "Confirmación del Desafío 1",
+              "description": "¡Desafío 1 enviado! Gracias por enviarnos tu desafío. Lo revisaremos y aprobaremos en 24 horas. Recuerda que el próximo desafío se abrirá en 7 días.",
+              "action": "Aceptar"
+            },
+            "completed": {
+              "title": "DESAFÍO 1 COMPLETO",
+              "action": "activar bloque 2"
+            }
+          },
+          {
+            "challenge": "02",
+            "title": "DESAFÍO 2: Abre o conecta tu cuenta Farcaster",
+            "description": "Conéctala con Coinbase",
+            "farcaster_user": "Escribe tu nombre de usuario de Farcaster aquí",
+            "action": "enviar desafío 2"
+          },
+          {
+            "challenge": "03",
+            "title": "DESAFÍO 3: Ahorra 2 USD durante una semana",
+            "description": "Demuestra ser un ahorrador comprometido",
+            "transaction_link": "Pega el enlace de la transacción aquí",
+            "action": "enviar desafío 3"
+          },
+          {
+            "challenge": "04",
+            "title": "DESAFÍO 4: Intercambia 1 USDC a Optimism",
+            "description": "Realiza el intercambio de monedas",
+            "transaction_link": "Pega el enlace de la transacción aquí",
+            "action": "enviar desafío 4"
+          }
+        ]
+      },
+      "unlock_loan": {
+        "title": "Tablero con todos los pasos desbloqueados",
+        "action": "Obtén tu préstamo",
+        "start": "Empezar"
+      },
+ 
+    "disburse_loan": {
+        "title": "Desembolsar tu préstamo",
+        "confirm_details": {
+        "account_address": {
+            "title": "Dirección de la cuenta de depósito",
+            "address": "0xsdj2932mfekvcj24fn288f8fn",
+            "description": "Depositaremos el préstamo en esta cuenta. Debe estar en USDC y en la red Base."
+        },
+        "email_address": {
+            "title": "Dirección de correo electrónico",
+            "address": "cristinaescobar@gmail.com",
+            "description": "Enviaremos notificaciones de pago a este correo electrónico."
+        },
+        "action": "CONTINUAR"
+        },
+        "loan_amount": {
+        "title": "Desembolsar tu préstamo",
+        "description": "Elige cuánto quieres que te prestemos",
+        "min_amount": "$10",
+        "max_amount": "$500",
+        "selected_amount": "$500",
+        "repayment_period": {
+            "description": "¿EN CUÁNTOS MESES QUIERES PAGAR?",
+            "months": 3
+        },
+        "action": "Solicitar",
+        "final_payment": {
+            "title": "PAGO FINAL",
+            "amount": "$510",
+            "interest": "2%",
+            "payment_dates": [
+            "23/7/24 - $170",
+            "23/8/24 - $170",
+            "23/9/24 - $170"
+            ],
+            "confirmation": {
+            "description": "¡Ya hemos desembolsado tu préstamo! Puedes ver los detalles de la transacción aquí: 0xsdj2932mfekvcj24fn288f8fn",
+            "action": "Aceptar"
+            }
+        }
+        }
+    },
+    "loan_status": {
+        "title": "MIS PRÉSTAMOS",
+        "loan_details": [
+        {
+            "request_date": "23/06/2024",
+            "borrow_amount": "$500",
+            "to_pay": "$510",
+            "quotas": 3,
+            "interest": "2%",
+            "payments": [
+            {
+                "title": "1er pago",
+                "amount": "$170",
+                "due_date": "23/07/24",
+                "status": "Pagado"
+            },
+            {
+                "title": "2do pago",
+                "amount": "$170",
+                "due_date": "23/08/24",
+                "status": "Pendiente"
+            },
+            {
+                "title": "3er pago",
+                "amount": "$170",
+                "due_date": "23/09/24",
+                "status": "Pendiente"
+            }
+            ]
+        }
+        ],
+        "post_payment_status": {
+        "title": "MIS PRÉSTAMOS",
+        "loan_details": {
+            "request_date": "23/06/2024",
+            "borrow_amount": "$500",
+            "remaining_amount": "$340",
+            "quotas": 3,
+            "interest": "2%",
+            "payments": [
+            {
+                "title": "1er pago",
+                "amount": "$170",
+                "due_date": "23/07/24",
+                "status": "Pagado"
+            },
+            {
+                "title": "2do pago",
+                "amount": "$170",
+                "due_date": "23/08/24",
+                "status": "Pendiente"
+            },
+            {
+                "title": "3er pago",
+                "amount": "$170",
+                "due_date": "23/09/24",
+                "status": "Pendiente"
+            }
+            ]
+        }
+        }
+    },
+    "dashboard": {
+        "title": "TABLERO",
+        "congratulations": "¡Felicidades por obtener tu primer préstamo!",
+        "description": "Puedes solicitar un nuevo préstamo cuando termines de pagar tu préstamo actual.",
+        "gift": {
+        "description": "¡Ahora puedes reclamar tu regalo de 10 USDC!",
+        "action": "OBTENER REGALO"
+        }
+    },
+    "payment": {
+        "confirmation": {
+        "title": "Pago realizado",
+        "description": "¡Felicidades, has pagado tu primera cuota a tiempo!",
+        "action": "Aceptar"
+        }
     }
 }
+}
+

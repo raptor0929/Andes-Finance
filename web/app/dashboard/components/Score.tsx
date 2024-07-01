@@ -27,7 +27,7 @@ function Score({ title, value }: IScore) {
           }}
         /> */}
       <div className="absolute flex flex-col items-center">
-        <span className="mb-1  text-2xl font-semibold text-black">{value}</span>
+        <span className="mb-1  text-4xl font-semibold text-black">{value}</span>
         <span className="mb-1  text-lg font-semibold text-black">{title}</span>
       </div>
     </div>

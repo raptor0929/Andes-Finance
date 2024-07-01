@@ -35,9 +35,9 @@ const Sidebar: React.FC = () => {
         href="/"
         className="flex items-center justify-center rounded py-2.5 text-white no-underline"
       >
-        <span className="text-2xl font-extrabold">lending</span>
+        <span className="text-2xl font-extrabold">Andes</span>
         <Image src="/images/logo-yellow.svg" alt="quests" width={24} height={24} className="mx-1" />
-        <span className="text-2xl font-extralight text-[#19CD5F]">Game</span>
+        <span className="text-2xl font-extralight text-[#19CD5F]">Finance</span>
       </Link>
       <div className="flex-grow">
         {links.map((link, index) => (

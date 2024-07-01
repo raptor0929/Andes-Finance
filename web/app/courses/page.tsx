@@ -7,17 +7,17 @@ const cards = [
   {
     title: 'Defi',
     description:
-      'Enim augue integer facilisi et urna diam pellentesque lectus. Odio at nunc sit facilisis.',
+      'Un curso de DeFi (Finanzas Descentralizadas) enseña los conceptos básicos de la tecnología blockchain, contratos inteligentes, y plataformas DeFi como intercambios descentralizados y yield farming. El objetivo es que los estudiantes comprendan y usen aplicaciones DeFi de manera segura y efectiva.',
   },
   {
     title: 'Base',
     description:
-      'Enim augue integer facilisi et urna diam pellentesque lectus. Odio at nunc sit facilisis.',
+      'Un curso sobre Base enseña cómo usar esta red blockchain, incluyendo la creación y uso de contratos inteligentes, la implementación de dApps, y las prácticas de seguridad necesarias para interactuar con la plataforma de manera efectiva.',
   },
   {
     title: 'Web3',
     description:
-      'Enim augue integer facilisi et urna diam pellentesque lectus. Odio at nunc sit facilisis.',
+      'Un curso de Web3 enseña los fundamentos de la web descentralizada, cubriendo blockchain, contratos inteligentes, dApps (aplicaciones descentralizadas) y protocolos de comunicación P2P. El objetivo es capacitar a los estudiantes para desarrollar y usar tecnologías Web3 de manera segura y eficiente.',
   },
 ];
 const page = () => {
@@ -29,8 +29,8 @@ const page = () => {
         </div>
         <div className="flex space-x-8 overflow-x-auto px-4 pb-10">
           {cards.map((card, index) => (
-            <Card key={index} className="h-full w-1/3 flex-shrink-0 gap-4 px-10 py-14">
-              <CardHeader className="flex flex-col items-start gap-2">
+            <Card key={index} className="h-100 flex w-1/3 flex-shrink-0 justify-around px-10 py-14">
+              <CardHeader className="flex flex-col items-start justify-between gap-2 ">
                 <Image
                   src="/images/home/briefcase-alt.svg"
                   width={50}
@@ -43,8 +43,8 @@ const page = () => {
               <CardBody className="mb-4">
                 <p>{card.description}</p>
               </CardBody>
-              <Button className="flex w-1 items-center justify-center rounded-full bg-primary py-6 text-center  text-white">
-                <span className="mt-1 text-2xl text-black">↗</span>
+              <Button className="flex w-1/3 items-center justify-center rounded-none bg-[#FFD028] py-6 text-center  text-white">
+                <span className="mt-1 text-xl text-black">Coming</span>
               </Button>
             </Card>
           ))}
