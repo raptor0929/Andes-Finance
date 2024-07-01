@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
+    "strictNullChecks": false,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -27,7 +28,14 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "strictBindCallApply": false,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false
   },
   "include": [
     "custom.d.ts",
