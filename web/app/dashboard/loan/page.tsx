@@ -20,7 +20,7 @@ import RequestLoanButton from './RequestLoanButton';
 import { A } from '@/components/layout/guide';
 
 const MAX_DURATION = 12;
-const AMOUNT_MULTIPLIER = 10000;
+const AMOUNT_MULTIPLIER = 1000000;
 
 const page = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
