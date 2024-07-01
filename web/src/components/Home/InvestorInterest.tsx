@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 function InvestorInterest() {
   const { t } = useTranslation();
   return (
-    <div className="flex overflow-hidden bg-white px-28 py-14 text-black">
+    <div className="flex overflow-hidden bg-white px-28 py-2 text-black">
       <div className=" flex w-1/3 flex-col justify-center gap-10">
         <h1 className="font-urbanist text-7xl">{t('investorInterest.title')}</h1>
         <p className="font-urbanist text-lg text-gray-500">{t('investorInterest.description')}</p>
